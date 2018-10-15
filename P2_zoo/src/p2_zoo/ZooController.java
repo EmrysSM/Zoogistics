@@ -4,10 +4,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ZooController {
-    public ZooModel model;
+    public P2_zoo model;
     public ZooView view;
 
-    public ZooController(ZooModel model, ZooView view) {
+    public ZooController(P2_zoo model, ZooView view) {
         this.model = model;
         this.view = view;
     }
