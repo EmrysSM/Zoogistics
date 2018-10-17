@@ -1,5 +1,7 @@
 package p2_zoo;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -16,6 +18,11 @@ public class zoogisticsView extends JFrame implements ActionListener {
         super("Zoogistics");
         this.setSize(600, 550); //size may change 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
+        int x = (int) ((screen.getWidth() - getWidth()) /2);
+        int y = (int) ((screen.getHeight() -getHeight()) /2);
+        setLocation(x, y); 
         
         panel = new JPanel();
         panel.setLayout(null);
