@@ -26,12 +26,14 @@ public class zoogisticsView extends JFrame implements ActionListener {
         int y = (int) ((screen.getHeight() -getHeight()) /2);
         setLocation(x, y); 
         
+        // initialize all panels
         mainPanel = new JPanel();
         logPanel = new JPanel();
         mvPanel = new JPanel();
         vwPanel = new JPanel();
         addPanel = new JPanel();
         
+        // Main Panel components
         Font myTitleFont = new Font("Georgia", Font.BOLD, 40);
         title = new JLabel();
         //TODO: plan is to positon at top center
