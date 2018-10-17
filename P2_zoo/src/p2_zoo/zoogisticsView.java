@@ -118,8 +118,21 @@ public class zoogisticsView extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        String str = e.getActionCommand();
+        /*TODO: move out mainPanel.setVisible(false); since all will have their own panel
+            have zoogisticsView.add(respectivepanel) and respectivepanel.setvisble(true)
+            in each block instead. 
+        */ 
+        if(str.equals("Log an Activity")) {
+            mainPanel.setVisible(false);
+        } else if (str.equals("Move Animal")) {
+            mainPanel.setVisible(false);
+        } else if(str.equals("View Next Up")) {
+            mainPanel.setVisible(false);
+        } else if (str.equals("Add Animal")) {
+            mainPanel.setVisible(false);
+        }
+     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
