@@ -13,8 +13,9 @@ import javax.swing.JPanel;
 public class zoogisticsView extends JFrame implements ActionListener {
     JLabel title;
     JButton logButton, moveButton, nxtupButton, addButton;
-    JPanel panel;
+    JPanel mainPanel, logPanel, mvPanel, vwPanel, addPanel;
     
+    //TODO: Spread buttons out, make them larger? Change font on button text
     public zoogisticsView() {
         super("Zoogistics");
         this.setSize(600, 550); //size may change 
@@ -25,8 +26,9 @@ public class zoogisticsView extends JFrame implements ActionListener {
         int y = (int) ((screen.getHeight() -getHeight()) /2);
         setLocation(x, y); 
         
-        panel = new JPanel();
-        //panel.setBackground(); not sure what color we want, get RGB value instead
+        // mainPanel is our home page view
+        mainPanel = new JPanel();
+
         
         Font myTitleFont = new Font("Georgia", Font.BOLD, 40);
         title = new JLabel();
@@ -34,29 +36,32 @@ public class zoogisticsView extends JFrame implements ActionListener {
         title.setText("Zoogistics");
         title.setPreferredSize(new Dimension(400, 60));
         title.setFont(myTitleFont);
-        panel.add(title);
+        mainPanel.add(title);
         
         logButton = new JButton("Log an Activity");
         logButton.setPreferredSize(new Dimension(240, 40));
         logButton.addActionListener(this);
-        panel.add(logButton);
+        mainPanel.add(logButton);
         
         moveButton = new JButton("Move Animal");
         moveButton.setPreferredSize(new Dimension(240, 40));
         moveButton.addActionListener(this);
-        panel.add(moveButton);
+        mainPanel.add(moveButton);
         
         nxtupButton = new JButton("View Next Up");
         nxtupButton.setPreferredSize(new Dimension(240, 40));
         nxtupButton.addActionListener(this);
-        panel.add(nxtupButton);
+        mainPanel.add(nxtupButton);
         
         addButton = new JButton("Add Animal");
         addButton.setPreferredSize(new Dimension(240, 40));
         addButton.addActionListener(this);
-        panel.add(addButton);
+        mainPanel.add(addButton);
 
-        this.add(panel);
+        this.add(mainPanel);
+        
+        // create other views
+        
     }
 
     @SuppressWarnings("unchecked")
