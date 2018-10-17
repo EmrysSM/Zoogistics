@@ -4,6 +4,7 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -25,13 +26,14 @@ public class zoogisticsView extends JFrame implements ActionListener {
         setLocation(x, y); 
         
         panel = new JPanel();
-        panel.setLayout(null);
         //panel.setBackground(); not sure what color we want, get RGB value instead
         
+        Font myTitleFont = new Font("Georgia", Font.BOLD, 40);
         title = new JLabel();
-        //TODO: this will definitely change. plan is to positon at top center
-        // find what i can use instead of setBounds() to look good with resize
-        title.setBounds(50, 50, 50, 50);
+        //TODO: plan is to positon at top center
+        title.setText("Zoogistics");
+        title.setPreferredSize(new Dimension(400, 60));
+        title.setFont(myTitleFont);
         panel.add(title);
         
         logButton = new JButton();
