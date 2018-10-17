@@ -14,7 +14,7 @@ public class zoogisticsView extends JFrame implements ActionListener {
     
     public zoogisticsView() {
         super("Zoogistics");
-        this.setSize(500, 550); //size may change 
+        this.setSize(600, 550); //size may change 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         panel = new JPanel();
@@ -28,18 +28,26 @@ public class zoogisticsView extends JFrame implements ActionListener {
         panel.add(title);
         
         logButton = new JButton();
+        logButton.setBounds(100, 130, 310, 60);
+        logButton.addActionListener(this);
+        panel.add(logButton);
         
         moveButton = new JButton();
+        moveButton.setBounds(100, 210, 210, 60);
+        moveButton.addActionListener(this);
+        panel.add(moveButton);
         
         nxtupButton = new JButton();
+        nxtupButton.setBounds(340, 130, 210, 60);
+        nxtupButton.addActionListener(this);
+        panel.add(nxtupButton);
         
         addButton = new JButton();
-        
-        
+        addButton.setBounds(340, 210, 210, 60);
+        addButton.addActionListener(this);
+        panel.add(addButton);
 
-
-        //initComponents();
-    
+        this.add(panel);
     }
 
     @SuppressWarnings("unchecked")
