@@ -37,22 +37,22 @@ public class zoogisticsView extends JFrame implements ActionListener {
         panel.add(title);
         
         logButton = new JButton("Log an Activity");
-        logButton.setBounds(100, 130, 310, 60);
+        logButton.setPreferredSize(new Dimension(240, 40));
         logButton.addActionListener(this);
         panel.add(logButton);
         
         moveButton = new JButton("Move Animal");
-        moveButton.setBounds(100, 210, 210, 60);
+        moveButton.setPreferredSize(new Dimension(240, 40));
         moveButton.addActionListener(this);
         panel.add(moveButton);
         
-        nxtupButton = new JButton("Activities Next Up");
-        nxtupButton.setBounds(340, 130, 210, 60);
+        nxtupButton = new JButton("View Next Up");
+        nxtupButton.setPreferredSize(new Dimension(240, 40));
         nxtupButton.addActionListener(this);
         panel.add(nxtupButton);
         
-        addButton = new JButton("Add Button");
-        addButton.setBounds(340, 210, 210, 60);
+        addButton = new JButton("Add Animal");
+        addButton.setPreferredSize(new Dimension(240, 40));
         addButton.addActionListener(this);
         panel.add(addButton);
 
