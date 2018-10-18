@@ -9,11 +9,14 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class zoogisticsView extends JFrame implements ActionListener {
-    JLabel title;
-    JButton logButton, moveButton, nxtupButton, addButton;
-    JPanel mainPanel, logPanel, mvPanel, vwPanel, addPanel;
+    JLabel title, header1, header2, header3, header4;
+    JPanel mainPanel, logPanel, mvPanel, vwPanel, addPanel; //all panels 
+    JButton logButton, moveButton, nxtupButton, addButton, finishButton; //main function buttons
+    JButton feedingButton, medButton; //log activity panel buttons
+    JTextField animalSearch, exhibitSearch, nameField, typeField, locationField;
     
     //TODO: Spread buttons out, make them larger? Change font on button text
     public zoogisticsView() {
