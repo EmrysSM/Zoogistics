@@ -5,9 +5,9 @@ import java.awt.event.ActionListener;
 
 public class ZooController {
     public P2_zoo model;
-    public ZooView view;
+    public zoogisticsView view;
 
-    public ZooController(P2_zoo model, ZooView view) {
+    public ZooController(P2_zoo model, zoogisticsView view) {
         this.model = model;
         this.view = view;
     }
