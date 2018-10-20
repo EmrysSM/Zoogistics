@@ -1,7 +1,10 @@
 package p2_zoo;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -10,36 +13,59 @@ import javax.swing.JPanel;
 public class zoogisticsView extends JFrame implements ActionListener {
     JLabel title;
     JButton logButton, moveButton, nxtupButton, addButton;
-    JPanel panel;
+    JPanel mainPanel, logPanel, mvPanel, vwPanel, addPanel;
     
+    //TODO: Spread buttons out, make them larger? Change font on button text
     public zoogisticsView() {
         super("Zoogistics");
-        this.setSize(500, 550); //size may change 
+        this.setSize(600, 550); //size may change 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        panel = new JPanel();
-        panel.setLayout(null);
-        //panel.setBackground(); not sure what color we want, get RGB value instead
+        Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
+        int x = (int) ((screen.getWidth() - getWidth()) /2);
+        int y = (int) ((screen.getHeight() -getHeight()) /2);
+        setLocation(x, y); 
         
+        // initialize all panels
+        mainPanel = new JPanel();
+        logPanel = new JPanel();
+        mvPanel = new JPanel();
+        vwPanel = new JPanel();
+        addPanel = new JPanel();
+        
+        // Main Panel components
+        Font myTitleFont = new Font("Georgia", Font.BOLD, 40);
         title = new JLabel();
-        //TODO: this will definitely change. plan is to positon at top center
-        // find what i can use instead of setBounds() to look good with resize
-        title.setBounds(50, 50, 50, 50);
-        panel.add(title);
+        //TODO: plan is to positon at top center
+        title.setText("Zoogistics");
+        title.setPreferredSize(new Dimension(400, 60));
+        title.setFont(myTitleFont);
+        mainPanel.add(title);
         
-        logButton = new JButton();
+        logButton = new JButton("Log an Activity");
+        logButton.setPreferredSize(new Dimension(240, 40));
+        logButton.addActionListener(this);
+        mainPanel.add(logButton);
         
-        moveButton = new JButton();
+        moveButton = new JButton("Move Animal");
+        moveButton.setPreferredSize(new Dimension(240, 40));
+        moveButton.addActionListener(this);
+        mainPanel.add(moveButton);
         
-        nxtupButton = new JButton();
+        nxtupButton = new JButton("View Next Up");
+        nxtupButton.setPreferredSize(new Dimension(240, 40));
+        nxtupButton.addActionListener(this);
+        mainPanel.add(nxtupButton);
         
-        addButton = new JButton();
-        
-        
+        addButton = new JButton("Add Animal");
+        addButton.setPreferredSize(new Dimension(240, 40));
+        addButton.addActionListener(this);
+        mainPanel.add(addButton);
 
-
-        //initComponents();
-    
+        this.add(mainPanel);
+        
+        // create other views
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -96,8 +122,21 @@ public class zoogisticsView extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        String str = e.getActionCommand();
+        /*TODO: move out mainPanel.setVisible(false); since all will have their own panel
+            have zoogisticsView.add(respectivepanel) and respectivepanel.setvisble(true)
+            in each block instead. 
+        */ 
+        if(str.equals("Log an Activity")) {
+            mainPanel.setVisible(false);
+        } else if (str.equals("Move Animal")) {
+            mainPanel.setVisible(false);
+        } else if(str.equals("View Next Up")) {
+            mainPanel.setVisible(false);
+        } else if (str.equals("Add Animal")) {
+            mainPanel.setVisible(false);
+        }
+     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
