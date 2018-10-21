@@ -14,12 +14,16 @@ public class zoogisticsView extends JFrame implements ActionListener {
     JLabel title;
     JButton logButton, moveButton, nxtupButton, addButton;
     JPanel mainPanel, logPanel, mvPanel, vwPanel, addPanel;
+    ZooController cont;
     
     //TODO: Spread buttons out, make them larger? Change font on button text
     public zoogisticsView() {
         super("Zoogistics");
         this.setSize(600, 550); //size may change 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Initialize controller
+        cont = new ZooController();
         
         Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
         int x = (int) ((screen.getWidth() - getWidth()) /2);
@@ -123,6 +127,8 @@ public class zoogisticsView extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         String str = e.getActionCommand();
+        cont.performAction(e);
+
         /*TODO: move out mainPanel.setVisible(false); since all will have their own panel
             have zoogisticsView.add(respectivepanel) and respectivepanel.setvisble(true)
             in each block instead. 

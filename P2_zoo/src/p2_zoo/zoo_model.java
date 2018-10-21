@@ -7,7 +7,7 @@ package p2_zoo;
 import java.sql.*;
 import java.util.logging.*;
 import static javax.swing.text.StyleConstants.Size;
-import java.beans.*;
+// import java.beans.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 

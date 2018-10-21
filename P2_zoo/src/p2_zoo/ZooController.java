@@ -4,15 +4,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ZooController {
-    public P2_zoo model;
+    public zoo_model model;
     public zoogisticsView view;
 
-    public ZooController(P2_zoo model, zoogisticsView view) {
-        this.model = model;
-        this.view = view;
+    public ZooController() {
+        this.model = new zoo_model();
     }
 
-    public void actionPerformed(ActionEvent e) {
+    public void performAction(ActionEvent e) {
+        String str = e.getActionCommand();
 
     }
 
