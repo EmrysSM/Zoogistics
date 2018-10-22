@@ -15,7 +15,7 @@ public class zoogisticsView extends JFrame implements ActionListener {
     JLabel title, header1, header2, header3, header4;
     JPanel mainPanel, logPanel, mvPanel, vwPanel, addPanel; //all panels 
     JButton logButton, moveButton, nxtupButton, addButton, finishButton; //main function buttons
-    JButton feedingButton, medButton; //log activity panel buttons
+    JButton feedButton, medButton; //log activity panel buttons
     JTextField animalSearch, exhibitSearch, nameField, typeField, locationField;
     
     //TODO: Spread buttons out, make them larger? Change font on button text
@@ -29,6 +29,8 @@ public class zoogisticsView extends JFrame implements ActionListener {
         int y = (int) ((screen.getHeight() -getHeight()) /2);
         setLocation(x, y); 
         
+        Font myTitleFont = new Font("Georgia", Font.BOLD, 40);
+        
         // initialize all panels
         mainPanel = new JPanel();
         logPanel = new JPanel();
@@ -36,8 +38,25 @@ public class zoogisticsView extends JFrame implements ActionListener {
         vwPanel = new JPanel();
         addPanel = new JPanel();
         
+        // logPanel components
+        header1 = new JLabel();
+        header1.setText("Log An Activity");
+        header1.setPreferredSize(new Dimension(400, 60));
+        header1.setFont(myTitleFont);
+        logPanel.add(header1);
+        
+        feedButton = new JButton("Log Feeding");
+        feedButton.setPreferredSize(new Dimension(240, 40));
+        feedButton.addActionListener(this);
+        logPanel.add(feedButton);
+        
+        medButton = new JButton("LogMedication");
+        medButton.setPreferredSize(new Dimension(240, 40));
+        medButton.addActionListener(this);
+        logPanel.add(medButton);
+        this.add(logPanel);
+        
         // Main Panel components
-        Font myTitleFont = new Font("Georgia", Font.BOLD, 40);
         title = new JLabel();
         //TODO: plan is to positon at top center
         title.setText("Zoogistics");
@@ -66,8 +85,6 @@ public class zoogisticsView extends JFrame implements ActionListener {
         mainPanel.add(addButton);
 
         this.add(mainPanel);
-        
-        // create other views
         
     }
 
