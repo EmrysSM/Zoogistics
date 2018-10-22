@@ -131,7 +131,16 @@ public class zoogisticsView extends JFrame implements ActionListener {
             in each block instead. 
         */ 
         if(str.equals("Log an Activity")) {
-            mainPanel.setVisible(false);
+            //removing panels
+            mainPanel.removeAll();
+            mainPanel.repaint();
+            mainPanel.revalidate();
+            
+            //adding panels
+            mainPanel.add(logPanel);
+            mainPanel.repaint();
+            mainPanel.revalidate();
+            
         } else if (str.equals("Move Animal")) {
             mainPanel.setVisible(false);
         } else if(str.equals("View Next Up")) {
