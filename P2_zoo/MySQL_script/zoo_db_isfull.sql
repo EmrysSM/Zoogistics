@@ -16,31 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `food_tb`
+-- Table structure for table `isfull`
 --
 
-DROP TABLE IF EXISTS `food_tb`;
+DROP TABLE IF EXISTS `isfull`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `food_tb` (
-  `Type` varchar(45) NOT NULL,
-  `Bamboo` tinyint(4) DEFAULT NULL,
-  `Fruit` tinyint(4) DEFAULT NULL,
-  `Grass` tinyint(4) DEFAULT NULL,
-  `Meat` tinyint(4) DEFAULT NULL,
-  `Vegetable` tinyint(4) DEFAULT NULL,
-  PRIMARY KEY (`Type`)
+CREATE TABLE `isfull` (
+  `Location` varchar(45) NOT NULL,
+  `Harley_Field_isFull` tinyint(4) DEFAULT NULL,
+  `Money_Business_isFull` tinyint(4) DEFAULT NULL,
+  `Jump_Around_isFull` tinyint(4) DEFAULT NULL,
+  `Petting_Word_isFull` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`Location`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `food_tb`
+-- Dumping data for table `isfull`
 --
 
-LOCK TABLES `food_tb` WRITE;
-/*!40000 ALTER TABLE `food_tb` DISABLE KEYS */;
-INSERT INTO `food_tb` VALUES ('Gorilla',0,1,0,1,1),('Kangraroo',0,1,1,0,1),('Monkey',1,1,0,1,1),('Zebra',0,0,1,0,0);
-/*!40000 ALTER TABLE `food_tb` ENABLE KEYS */;
+LOCK TABLES `isfull` WRITE;
+/*!40000 ALTER TABLE `isfull` DISABLE KEYS */;
+INSERT INTO `isfull` VALUES ('Harley_Field',0,0,0,0),('Jump_Around',0,0,0,0),('Monkey_Business',1,0,0,0),('Petting_World',0,0,0,0);
+/*!40000 ALTER TABLE `isfull` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -52,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-22 20:46:29
+-- Dump completed on 2018-10-22 20:46:28
