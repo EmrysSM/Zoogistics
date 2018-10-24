@@ -58,6 +58,7 @@ public class zoogisticsFrame extends JFrame {
         searchAnimal = new javax.swing.JTextField();
         submitButton3 = new javax.swing.JButton();
         hint = new javax.swing.JLabel();
+        searchIcon1 = new javax.swing.JLabel();
         mvPanel = new javax.swing.JPanel();
         mvHeader = new javax.swing.JLabel();
         homeButton2 = new javax.swing.JButton();
@@ -68,6 +69,8 @@ public class zoogisticsFrame extends JFrame {
         submitButton2 = new javax.swing.JButton();
         hint1 = new javax.swing.JLabel();
         hint2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         nxtupPanel = new javax.swing.JPanel();
         nxtupHeader = new javax.swing.JLabel();
         homeButton3 = new javax.swing.JButton();
@@ -89,6 +92,7 @@ public class zoogisticsFrame extends JFrame {
         jTfType = new javax.swing.JTextField();
         jLabelSex = new javax.swing.JLabel();
         jTfSex = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
         successPanel = new javax.swing.JPanel();
         successHeader = new javax.swing.JLabel();
         msg1 = new javax.swing.JLabel();
@@ -167,7 +171,7 @@ public class zoogisticsFrame extends JFrame {
                 .addGroup(homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nxtupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(addanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(678, Short.MAX_VALUE))
+                .addContainerGap(810, Short.MAX_VALUE))
         );
 
         mainPanel.add(homePanel, "homePanel");
@@ -205,6 +209,8 @@ public class zoogisticsFrame extends JFrame {
         hint.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         hint.setText("you can search by name, type or ID");
 
+        searchIcon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/searchIcon.png"))); // NOI18N
+
         javax.swing.GroupLayout logPanelLayout = new javax.swing.GroupLayout(logPanel);
         logPanel.setLayout(logPanelLayout);
         logPanelLayout.setHorizontalGroup(
@@ -234,9 +240,14 @@ public class zoogisticsFrame extends JFrame {
                         .addGroup(logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(hint)
                             .addComponent(question1)
-                            .addComponent(question2)
-                            .addComponent(searchAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(question2))
                         .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(logPanelLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(searchIcon1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(searchAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         logPanelLayout.setVerticalGroup(
             logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -254,8 +265,10 @@ public class zoogisticsFrame extends JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(hint)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(searchAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 601, Short.MAX_VALUE)
+                .addGroup(logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(searchIcon1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(searchAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 733, Short.MAX_VALUE)
                 .addGroup(logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(submitButton3)
                     .addComponent(homeButton1))
@@ -299,6 +312,10 @@ public class zoogisticsFrame extends JFrame {
         hint2.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         hint2.setText("search by exhibit name");
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/searchIcon.png"))); // NOI18N
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/searchIcon.png"))); // NOI18N
+
         javax.swing.GroupLayout mvPanelLayout = new javax.swing.GroupLayout(mvPanel);
         mvPanel.setLayout(mvPanelLayout);
         mvPanelLayout.setHorizontalGroup(
@@ -310,38 +327,50 @@ public class zoogisticsFrame extends JFrame {
                 .addComponent(homeButton2)
                 .addGap(80, 80, 80))
             .addGroup(mvPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(mvPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(exhibitSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 522, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(animalSearch2, javax.swing.GroupLayout.PREFERRED_SIZE, 522, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mvHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(question4)
+                .addGap(36, 36, 36)
+                .addGroup(mvPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(animalSearch2, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(mvPanelLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
                         .addGroup(mvPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(hint1)
-                            .addComponent(question3)))
-                    .addComponent(hint2))
-                .addContainerGap(204, Short.MAX_VALUE))
+                            .addComponent(mvHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(question4)
+                            .addGroup(mvPanelLayout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addGroup(mvPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(hint1)
+                                    .addComponent(question3)
+                                    .addComponent(jLabel3)))
+                            .addComponent(hint2))
+                        .addGap(186, 186, 186))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, mvPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(exhibitSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(188, Short.MAX_VALUE))
         );
         mvPanelLayout.setVerticalGroup(
             mvPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mvPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(mvHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(question3)
-                .addGap(3, 3, 3)
-                .addComponent(hint1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(animalSearch2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
-                .addComponent(question4)
-                .addGap(4, 4, 4)
-                .addComponent(hint2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(exhibitSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 546, Short.MAX_VALUE)
+                .addGroup(mvPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(mvPanelLayout.createSequentialGroup()
+                        .addComponent(mvHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(question3)
+                        .addGap(3, 3, 3)
+                        .addComponent(hint1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(mvPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(animalSearch2, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(39, 39, 39)
+                        .addComponent(question4)
+                        .addGap(4, 4, 4)
+                        .addComponent(hint2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(exhibitSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 670, Short.MAX_VALUE)
                 .addGroup(mvPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(submitButton2)
                     .addComponent(homeButton2))
@@ -407,6 +436,9 @@ public class zoogisticsFrame extends JFrame {
 
         mainPanel.add(nxtupPanel, "nxtupPanel");
 
+        addanPanel.setPreferredSize(new java.awt.Dimension(732, 573));
+        addanPanel.setRequestFocusEnabled(false);
+
         addanHeader.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         addanHeader.setText("Add New Animal");
 
@@ -471,6 +503,8 @@ public class zoogisticsFrame extends JFrame {
         jLabelSex.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabelSex.setText("Sex:");
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/searchIcon.png"))); // NOI18N
+
         javax.swing.GroupLayout addanPanelLayout = new javax.swing.GroupLayout(addanPanel);
         addanPanel.setLayout(addanPanelLayout);
         addanPanelLayout.setHorizontalGroup(
@@ -479,48 +513,45 @@ public class zoogisticsFrame extends JFrame {
                 .addContainerGap()
                 .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(addanPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addanPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addanPanelLayout.createSequentialGroup()
+                        .addComponent(addanHeader)
+                        .addGap(0, 416, Short.MAX_VALUE))
+                    .addGroup(addanPanelLayout.createSequentialGroup()
+                        .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel1)
+                            .addGroup(addanPanelLayout.createSequentialGroup()
                                 .addComponent(jLabelName)
-                                .addGap(63, 63, 63))
+                                .addGap(21, 21, 21)
+                                .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(addanPanelLayout.createSequentialGroup()
+                                        .addComponent(jLabelType, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jTfType, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(65, 65, 65)
+                                        .addComponent(jLabelSex)
+                                        .addGap(31, 31, 31)
+                                        .addComponent(jTfSex, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jTfName)))
                             .addGroup(addanPanelLayout.createSequentialGroup()
                                 .addComponent(jLabelExhibit)
-                                .addGap(50, 50, 50)))
-                        .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTfName, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(addanPanelLayout.createSequentialGroup()
-                                .addComponent(jLabelType, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTfType, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(64, 64, 64)
-                                .addComponent(jLabelSex)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTfSex, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(185, 185, 185))
-                    .addGroup(addanPanelLayout.createSequentialGroup()
-                        .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, addanPanelLayout.createSequentialGroup()
-                                .addComponent(jLabelnxtAct)
+                                .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTfNxtAct, javax.swing.GroupLayout.DEFAULT_SIZE, 417, Short.MAX_VALUE))
-                            .addComponent(addanHeader, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, addanPanelLayout.createSequentialGroup()
+                                .addComponent(jTfExhibit))
+                            .addGroup(addanPanelLayout.createSequentialGroup()
                                 .addComponent(jLabelLf)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTfExhibit, javax.swing.GroupLayout.DEFAULT_SIZE, 419, Short.MAX_VALUE)
-                                    .addComponent(jTfFeed))))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                                .addComponent(jTfFeed))
+                            .addGroup(addanPanelLayout.createSequentialGroup()
+                                .addComponent(jLabelnxtAct)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTfNxtAct)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addanPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(submitButton)
-                .addGap(49, 49, 49)
+                .addGap(64, 64, 64)
                 .addComponent(homeButton4)
-                .addGap(135, 135, 135))
+                .addGap(132, 132, 132))
         );
         addanPanelLayout.setVerticalGroup(
             addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -529,34 +560,38 @@ public class zoogisticsFrame extends JFrame {
                 .addComponent(addanHeader)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTfSex, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabelType, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTfType, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabelSex)))
-                .addGap(12, 12, 12)
+                .addGap(18, 18, 18)
+                .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTfType, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelType, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelSex)
+                    .addComponent(jTfSex, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTfName, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelName))
-                .addGap(18, 18, 18)
-                .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTfExhibit, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelExhibit))
-                .addGap(47, 47, 47)
                 .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(addanPanelLayout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(jLabelExhibit))
+                    .addGroup(addanPanelLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTfExhibit, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(36, 36, 36)
+                .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelLf)
                     .addComponent(jTfFeed, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
+                .addGap(49, 49, 49)
                 .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTfNxtAct, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelnxtAct, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(77, 77, 77)
+                    .addComponent(jLabelnxtAct, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTfNxtAct, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(226, 226, 226)
                 .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(submitButton)
                     .addComponent(homeButton4))
-                .addGap(74, 74, 74))
+                .addContainerGap(399, Short.MAX_VALUE))
         );
 
         mainPanel.add(addanPanel, "addanPanel");
@@ -613,7 +648,7 @@ public class zoogisticsFrame extends JFrame {
                 .addComponent(msg2contd, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(80, 80, 80)
                 .addComponent(rtnhomeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(588, Short.MAX_VALUE))
+                .addContainerGap(720, Short.MAX_VALUE))
         );
 
         mainPanel.add(successPanel, "successPanel");
@@ -662,11 +697,6 @@ public class zoogisticsFrame extends JFrame {
         card.show(mainPanel, "homePanel");
     }//GEN-LAST:event_homeButton1ActionPerformed
 
-    private void homeButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButton2ActionPerformed
-        CardLayout card = (CardLayout)mainPanel.getLayout();
-        card.show(mainPanel, "homePanel");
-    }//GEN-LAST:event_homeButton2ActionPerformed
-
     private void homeButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButton3ActionPerformed
         CardLayout card = (CardLayout)mainPanel.getLayout();
         card.show(mainPanel, "homePanel");
@@ -680,10 +710,6 @@ public class zoogisticsFrame extends JFrame {
     private void logFeedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logFeedActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_logFeedActionPerformed
-
-    private void animalSearch2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_animalSearch2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_animalSearch2ActionPerformed
 
     private void jTfNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTfNameActionPerformed
         // TODO add your handling code here:
@@ -715,6 +741,15 @@ public class zoogisticsFrame extends JFrame {
         CardLayout card = (CardLayout)mainPanel.getLayout();
         card.show(mainPanel, "successPanel");
     }//GEN-LAST:event_submitButton2ActionPerformed
+
+    private void animalSearch2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_animalSearch2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_animalSearch2ActionPerformed
+
+    private void homeButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButton2ActionPerformed
+        CardLayout card = (CardLayout)mainPanel.getLayout();
+        card.show(mainPanel, "homePanel");
+    }//GEN-LAST:event_homeButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -768,6 +803,9 @@ public class zoogisticsFrame extends JFrame {
     private javax.swing.JButton homeButton4;
     private javax.swing.JPanel homePanel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabelExhibit;
     private javax.swing.JLabel jLabelLf;
     private javax.swing.JLabel jLabelName;
@@ -801,6 +839,7 @@ public class zoogisticsFrame extends JFrame {
     private javax.swing.JLabel question4;
     private javax.swing.JButton rtnhomeButton;
     private javax.swing.JTextField searchAnimal;
+    private javax.swing.JLabel searchIcon1;
     private javax.swing.JButton submitButton;
     private javax.swing.JButton submitButton2;
     private javax.swing.JButton submitButton3;
