@@ -57,6 +57,7 @@ public class zoogisticsFrame extends JFrame {
         question1 = new javax.swing.JLabel();
         searchAnimal = new javax.swing.JTextField();
         submitButton3 = new javax.swing.JButton();
+        hint = new javax.swing.JLabel();
         mvPanel = new javax.swing.JPanel();
         mvHeader = new javax.swing.JLabel();
         homeButton2 = new javax.swing.JButton();
@@ -65,6 +66,8 @@ public class zoogisticsFrame extends JFrame {
         question4 = new javax.swing.JLabel();
         exhibitSearch = new javax.swing.JTextField();
         submitButton2 = new javax.swing.JButton();
+        hint1 = new javax.swing.JLabel();
+        hint2 = new javax.swing.JLabel();
         nxtupPanel = new javax.swing.JPanel();
         nxtupHeader = new javax.swing.JLabel();
         homeButton3 = new javax.swing.JButton();
@@ -164,10 +167,13 @@ public class zoogisticsFrame extends JFrame {
                 .addGroup(homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nxtupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(addanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(304, Short.MAX_VALUE))
+                .addContainerGap(678, Short.MAX_VALUE))
         );
 
         mainPanel.add(homePanel, "homePanel");
+
+        logPanel.setMaximumSize(new java.awt.Dimension(3000, 3000));
+        logPanel.setPreferredSize(new java.awt.Dimension(700, 800));
 
         logHeader.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         logHeader.setText("Log an Activity");
@@ -180,7 +186,7 @@ public class zoogisticsFrame extends JFrame {
             }
         });
 
-        question2.setText("Step 2: Who would you like to log an activity for? (you can search by name, type or ID)");
+        question2.setText("Step 2: Who would you like to log an activity for?");
 
         logFeed.setText("Log Feeding");
         logFeed.addActionListener(new java.awt.event.ActionListener() {
@@ -191,26 +197,18 @@ public class zoogisticsFrame extends JFrame {
 
         logMedication.setText("Log Medication");
 
-        question1.setText("Step 1: What kind of activity are you logging?");
+        question1.setText("Step 1: What kind of activity are you logging? (Choose 1)");
 
         submitButton3.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         submitButton3.setText("Submit");
+
+        hint.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        hint.setText("you can search by name, type or ID");
 
         javax.swing.GroupLayout logPanelLayout = new javax.swing.GroupLayout(logPanel);
         logPanel.setLayout(logPanelLayout);
         logPanelLayout.setHorizontalGroup(
             logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(logPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(logHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(440, Short.MAX_VALUE))
-            .addGroup(logPanelLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(searchAnimal)
-                    .addComponent(question1)
-                    .addComponent(question2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, logPanelLayout.createSequentialGroup()
                 .addGroup(logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(logPanelLayout.createSequentialGroup()
@@ -221,9 +219,24 @@ public class zoogisticsFrame extends JFrame {
                     .addGroup(logPanelLayout.createSequentialGroup()
                         .addGap(91, 91, 91)
                         .addComponent(logFeed)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(logMedication)))
+                        .addGap(155, 155, 155)
+                        .addComponent(logMedication)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(94, 94, 94))
+            .addGroup(logPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(logPanelLayout.createSequentialGroup()
+                        .addComponent(logHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(440, Short.MAX_VALUE))
+                    .addGroup(logPanelLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(hint)
+                            .addComponent(question1)
+                            .addComponent(question2)
+                            .addComponent(searchAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         logPanelLayout.setVerticalGroup(
             logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -238,9 +251,11 @@ public class zoogisticsFrame extends JFrame {
                     .addComponent(logMedication))
                 .addGap(32, 32, 32)
                 .addComponent(question2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(hint)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(searchAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 243, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 601, Short.MAX_VALUE)
                 .addGroup(logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(submitButton3)
                     .addComponent(homeButton1))
@@ -278,27 +293,36 @@ public class zoogisticsFrame extends JFrame {
             }
         });
 
+        hint1.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        hint1.setText("you can search by name, type or ID");
+
+        hint2.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        hint2.setText("search by exhibit name");
+
         javax.swing.GroupLayout mvPanelLayout = new javax.swing.GroupLayout(mvPanel);
         mvPanel.setLayout(mvPanelLayout);
         mvPanelLayout.setHorizontalGroup(
             mvPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mvPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(mvPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(exhibitSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 522, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(animalSearch2, javax.swing.GroupLayout.PREFERRED_SIZE, 522, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(mvPanelLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(question3))
-                    .addComponent(mvHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(question4))
-                .addContainerGap(204, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mvPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(submitButton2)
                 .addGap(37, 37, 37)
                 .addComponent(homeButton2)
                 .addGap(80, 80, 80))
+            .addGroup(mvPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(mvPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(exhibitSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 522, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(animalSearch2, javax.swing.GroupLayout.PREFERRED_SIZE, 522, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mvHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(question4)
+                    .addGroup(mvPanelLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(mvPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(hint1)
+                            .addComponent(question3)))
+                    .addComponent(hint2))
+                .addContainerGap(204, Short.MAX_VALUE))
         );
         mvPanelLayout.setVerticalGroup(
             mvPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -307,13 +331,17 @@ public class zoogisticsFrame extends JFrame {
                 .addComponent(mvHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(question3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(3, 3, 3)
+                .addComponent(hint1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(animalSearch2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
                 .addComponent(question4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(4, 4, 4)
+                .addComponent(hint2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(exhibitSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 199, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 546, Short.MAX_VALUE)
                 .addGroup(mvPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(submitButton2)
                     .addComponent(homeButton2))
@@ -351,12 +379,12 @@ public class zoogisticsFrame extends JFrame {
         nxtupPanelLayout.setHorizontalGroup(
             nxtupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(nxtupPanelLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(nxtupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, nxtupPanelLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(homeButton3))
                     .addGroup(nxtupPanelLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(nxtupHeader)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -585,7 +613,7 @@ public class zoogisticsFrame extends JFrame {
                 .addComponent(msg2contd, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(80, 80, 80)
                 .addComponent(rtnhomeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addContainerGap(588, Short.MAX_VALUE))
         );
 
         mainPanel.add(successPanel, "successPanel");
@@ -731,6 +759,9 @@ public class zoogisticsFrame extends JFrame {
     private javax.swing.JTextField animalSearch2;
     private javax.swing.JPanel dataEntriesPanel;
     private javax.swing.JTextField exhibitSearch;
+    private javax.swing.JLabel hint;
+    private javax.swing.JLabel hint1;
+    private javax.swing.JLabel hint2;
     private javax.swing.JButton homeButton1;
     private javax.swing.JButton homeButton2;
     private javax.swing.JButton homeButton3;
