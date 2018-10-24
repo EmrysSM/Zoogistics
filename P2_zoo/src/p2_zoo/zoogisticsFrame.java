@@ -104,6 +104,8 @@ public class zoogisticsFrame extends JFrame {
 
         mainPanel.setLayout(new java.awt.CardLayout());
 
+        homePanel.setPreferredSize(new java.awt.Dimension(732, 573));
+
         titleLabel.setFont(new java.awt.Font("Georgia", 1, 48)); // NOI18N
         titleLabel.setText("Zoogistics");
 
@@ -171,13 +173,13 @@ public class zoogisticsFrame extends JFrame {
                 .addGroup(homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nxtupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(addanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(810, Short.MAX_VALUE))
+                .addContainerGap(231, Short.MAX_VALUE))
         );
 
         mainPanel.add(homePanel, "homePanel");
 
         logPanel.setMaximumSize(new java.awt.Dimension(3000, 3000));
-        logPanel.setPreferredSize(new java.awt.Dimension(700, 800));
+        logPanel.setPreferredSize(new java.awt.Dimension(732, 573));
 
         logHeader.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         logHeader.setText("Log an Activity");
@@ -234,7 +236,7 @@ public class zoogisticsFrame extends JFrame {
                 .addGroup(logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(logPanelLayout.createSequentialGroup()
                         .addComponent(logHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(440, Short.MAX_VALUE))
+                        .addContainerGap(408, Short.MAX_VALUE))
                     .addGroup(logPanelLayout.createSequentialGroup()
                         .addGap(27, 27, 27)
                         .addGroup(logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -268,7 +270,7 @@ public class zoogisticsFrame extends JFrame {
                 .addGroup(logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(searchIcon1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(searchAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 733, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 354, Short.MAX_VALUE)
                 .addGroup(logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(submitButton3)
                     .addComponent(homeButton1))
@@ -276,6 +278,8 @@ public class zoogisticsFrame extends JFrame {
         );
 
         mainPanel.add(logPanel, "logPanel");
+
+        mvPanel.setPreferredSize(new java.awt.Dimension(732, 573));
 
         mvHeader.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         mvHeader.setText("Move an Animal");
@@ -370,7 +374,7 @@ public class zoogisticsFrame extends JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(exhibitSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 670, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 291, Short.MAX_VALUE)
                 .addGroup(mvPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(submitButton2)
                     .addComponent(homeButton2))
@@ -509,6 +513,12 @@ public class zoogisticsFrame extends JFrame {
         addanPanel.setLayout(addanPanelLayout);
         addanPanelLayout.setHorizontalGroup(
             addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addanPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(submitButton)
+                .addGap(49, 49, 49)
+                .addComponent(homeButton4)
+                .addGap(135, 135, 135))
             .addGroup(addanPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -516,42 +526,37 @@ public class zoogisticsFrame extends JFrame {
                         .addComponent(addanHeader)
                         .addGap(0, 416, Short.MAX_VALUE))
                     .addGroup(addanPanelLayout.createSequentialGroup()
-                        .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel1)
-                            .addGroup(addanPanelLayout.createSequentialGroup()
-                                .addComponent(jLabelName)
-                                .addGap(21, 21, 21)
-                                .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(addanPanelLayout.createSequentialGroup()
-                                        .addComponent(jLabelType, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jTfType, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(65, 65, 65)
-                                        .addComponent(jLabelSex)
-                                        .addGap(31, 31, 31)
-                                        .addComponent(jTfSex, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jTfName)))
-                            .addGroup(addanPanelLayout.createSequentialGroup()
-                                .addComponent(jLabelExhibit)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTfExhibit))
-                            .addGroup(addanPanelLayout.createSequentialGroup()
-                                .addComponent(jLabelLf)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTfFeed))
+                        .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel1)
+                                .addGroup(addanPanelLayout.createSequentialGroup()
+                                    .addComponent(jLabelName)
+                                    .addGap(21, 21, 21)
+                                    .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(addanPanelLayout.createSequentialGroup()
+                                            .addComponent(jLabelType, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(jTfType, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(65, 65, 65)
+                                            .addComponent(jLabelSex)
+                                            .addGap(31, 31, 31)
+                                            .addComponent(jTfSex, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jTfName)))
+                                .addGroup(addanPanelLayout.createSequentialGroup()
+                                    .addComponent(jLabelExhibit)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jLabel2)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jTfExhibit))
+                                .addGroup(addanPanelLayout.createSequentialGroup()
+                                    .addComponent(jLabelLf)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jTfFeed)))
                             .addGroup(addanPanelLayout.createSequentialGroup()
                                 .addComponent(jLabelnxtAct)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTfNxtAct)))
+                                .addComponent(jTfNxtAct, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addanPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(submitButton)
-                .addGap(64, 64, 64)
-                .addComponent(homeButton4)
-                .addGap(132, 132, 132))
         );
         addanPanelLayout.setVerticalGroup(
             addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -587,14 +592,16 @@ public class zoogisticsFrame extends JFrame {
                 .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelnxtAct, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTfNxtAct, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(226, 226, 226)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(submitButton)
                     .addComponent(homeButton4))
-                .addContainerGap(399, Short.MAX_VALUE))
+                .addGap(74, 74, 74))
         );
 
         mainPanel.add(addanPanel, "addanPanel");
+
+        successPanel.setPreferredSize(new java.awt.Dimension(732, 573));
 
         successHeader.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         successHeader.setText("Success!");
@@ -648,7 +655,7 @@ public class zoogisticsFrame extends JFrame {
                 .addComponent(msg2contd, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(80, 80, 80)
                 .addComponent(rtnhomeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(720, Short.MAX_VALUE))
+                .addContainerGap(229, Short.MAX_VALUE))
         );
 
         mainPanel.add(successPanel, "successPanel");
