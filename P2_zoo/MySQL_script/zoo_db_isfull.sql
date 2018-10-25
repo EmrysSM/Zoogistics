@@ -16,33 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `isfull_tb`
+-- Table structure for table `isfull`
 --
 
-DROP TABLE IF EXISTS `isfull_tb`;
+DROP TABLE IF EXISTS `isfull`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `isfull_tb` (
-  `main_tb_id` int(11) NOT NULL,
-  `main_tb_location` varchar(45) NOT NULL,
-  `harley_field_isFull` tinyint(4) DEFAULT NULL,
-  `monkey_business_isFull` tinyint(4) DEFAULT NULL,
-  `insect_world_isFull` tinyint(4) DEFAULT NULL,
-  `jump_arround_isFull` tinyint(4) DEFAULT NULL,
-  PRIMARY KEY (`main_tb_id`,`main_tb_location`),
-  KEY `fk_isFull_tb_main_tb1_idx` (`main_tb_id`,`main_tb_location`),
-  CONSTRAINT `fk_isFull_tb_main_tb1` FOREIGN KEY (`main_tb_id`, `main_tb_location`) REFERENCES `main_tb` (`id`, `location`)
+CREATE TABLE `isfull` (
+  `Location` varchar(45) NOT NULL,
+  `Harley_Field_isFull` tinyint(4) DEFAULT NULL,
+  `Money_Business_isFull` tinyint(4) DEFAULT NULL,
+  `Jump_Around_isFull` tinyint(4) DEFAULT NULL,
+  `Petting_Word_isFull` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`Location`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `isfull_tb`
+-- Dumping data for table `isfull`
 --
 
-LOCK TABLES `isfull_tb` WRITE;
-/*!40000 ALTER TABLE `isfull_tb` DISABLE KEYS */;
-INSERT INTO `isfull_tb` VALUES (1,'vet',1,0,0,0),(2,'pen',0,1,0,0),(3,'exh',0,0,1,0),(4,'vet',0,0,0,1);
-/*!40000 ALTER TABLE `isfull_tb` ENABLE KEYS */;
+LOCK TABLES `isfull` WRITE;
+/*!40000 ALTER TABLE `isfull` DISABLE KEYS */;
+INSERT INTO `isfull` VALUES ('Harley_Field',0,0,0,0),('Jump_Around',0,0,0,0),('Monkey_Business',1,0,0,0),('Petting_World',0,0,0,0);
+/*!40000 ALTER TABLE `isfull` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -54,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-15 14:05:13
+-- Dump completed on 2018-10-22 20:46:28
