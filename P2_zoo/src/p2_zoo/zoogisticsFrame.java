@@ -48,6 +48,7 @@ public class zoogisticsFrame extends JFrame {
         nxtupButton = new javax.swing.JButton();
         mvButton = new javax.swing.JButton();
         addanButton = new javax.swing.JButton();
+        bgImage1 = new javax.swing.JLabel();
         logPanel = new javax.swing.JPanel();
         logHeader = new javax.swing.JLabel();
         homeButton1 = new javax.swing.JButton();
@@ -59,6 +60,7 @@ public class zoogisticsFrame extends JFrame {
         submitButton3 = new javax.swing.JButton();
         hint = new javax.swing.JLabel();
         searchIcon1 = new javax.swing.JLabel();
+        bgImage2 = new javax.swing.JLabel();
         mvPanel = new javax.swing.JPanel();
         mvHeader = new javax.swing.JLabel();
         homeButton2 = new javax.swing.JButton();
@@ -71,10 +73,12 @@ public class zoogisticsFrame extends JFrame {
         hint2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        bgImage3 = new javax.swing.JLabel();
         nxtupPanel = new javax.swing.JPanel();
         nxtupHeader = new javax.swing.JLabel();
         homeButton3 = new javax.swing.JButton();
         dataEntriesPanel = new javax.swing.JPanel();
+        bgImage4 = new javax.swing.JLabel();
         addanPanel = new javax.swing.JPanel();
         addanHeader = new javax.swing.JLabel();
         homeButton4 = new javax.swing.JButton();
@@ -93,6 +97,7 @@ public class zoogisticsFrame extends JFrame {
         jLabelSex = new javax.swing.JLabel();
         jTfSex = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        bgImage5 = new javax.swing.JLabel();
         successPanel = new javax.swing.JPanel();
         successHeader = new javax.swing.JLabel();
         msg1 = new javax.swing.JLabel();
@@ -112,7 +117,9 @@ public class zoogisticsFrame extends JFrame {
         homePanel.add(titleLabel);
         titleLabel.setBounds(250, 0, 260, 100);
 
+        logButton.setBackground(new java.awt.Color(0, 0, 0));
         logButton.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        logButton.setForeground(new java.awt.Color(255, 255, 255));
         logButton.setText("Log Activity");
         logButton.setPreferredSize(new java.awt.Dimension(110, 30));
         logButton.setSize(new java.awt.Dimension(260, 70));
@@ -124,7 +131,9 @@ public class zoogisticsFrame extends JFrame {
         homePanel.add(logButton);
         logButton.setBounds(40, 140, 260, 70);
 
+        nxtupButton.setBackground(new java.awt.Color(0, 0, 0));
         nxtupButton.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        nxtupButton.setForeground(new java.awt.Color(255, 255, 255));
         nxtupButton.setText("Next Up");
         nxtupButton.setSize(new java.awt.Dimension(260, 70));
         nxtupButton.addActionListener(new java.awt.event.ActionListener() {
@@ -135,7 +144,9 @@ public class zoogisticsFrame extends JFrame {
         homePanel.add(nxtupButton);
         nxtupButton.setBounds(40, 280, 250, 90);
 
+        mvButton.setBackground(new java.awt.Color(0, 0, 0));
         mvButton.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        mvButton.setForeground(new java.awt.Color(255, 255, 255));
         mvButton.setText("Move Animal");
         mvButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -145,7 +156,9 @@ public class zoogisticsFrame extends JFrame {
         homePanel.add(mvButton);
         mvButton.setBounds(430, 140, 260, 70);
 
+        addanButton.setBackground(new java.awt.Color(0, 0, 0));
         addanButton.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        addanButton.setForeground(new java.awt.Color(255, 255, 255));
         addanButton.setText("Add Animal");
         addanButton.setMaximumSize(new java.awt.Dimension(164, 30));
         addanButton.setMinimumSize(new java.awt.Dimension(164, 30));
@@ -158,6 +171,10 @@ public class zoogisticsFrame extends JFrame {
         });
         homePanel.add(addanButton);
         addanButton.setBounds(430, 280, 260, 70);
+
+        bgImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/bg4.png"))); // NOI18N
+        homePanel.add(bgImage1);
+        bgImage1.setBounds(0, 0, 730, 580);
 
         mainPanel.add(homePanel, "homePanel");
 
@@ -216,6 +233,10 @@ public class zoogisticsFrame extends JFrame {
         searchIcon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/searchIcon.png"))); // NOI18N
         logPanel.add(searchIcon1);
         searchIcon1.setBounds(31, 213, 24, 48);
+
+        bgImage2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/bg4.png"))); // NOI18N
+        logPanel.add(bgImage2);
+        bgImage2.setBounds(0, -4, 730, 580);
 
         mainPanel.add(logPanel, "logPanel");
 
@@ -283,6 +304,10 @@ public class zoogisticsFrame extends JFrame {
         mvPanel.add(jLabel4);
         jLabel4.setBounds(36, 266, 24, 54);
 
+        bgImage3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/bg4.png"))); // NOI18N
+        mvPanel.add(bgImage3);
+        bgImage3.setBounds(-10, -4, 740, 580);
+
         mainPanel.add(mvPanel, "mvPanel");
 
         nxtupPanel.setLayout(null);
@@ -317,6 +342,10 @@ public class zoogisticsFrame extends JFrame {
 
         nxtupPanel.add(dataEntriesPanel);
         dataEntriesPanel.setBounds(22, 78, 563, 233);
+
+        bgImage4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/bg4.png"))); // NOI18N
+        nxtupPanel.add(bgImage4);
+        bgImage4.setBounds(0, -4, 730, 580);
 
         mainPanel.add(nxtupPanel, "nxtupPanel");
 
@@ -424,27 +453,37 @@ public class zoogisticsFrame extends JFrame {
         addanPanel.add(jLabel2);
         jLabel2.setBounds(92, 210, 24, 43);
 
+        bgImage5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/bg4.png"))); // NOI18N
+        addanPanel.add(bgImage5);
+        bgImage5.setBounds(0, -4, 730, 580);
+
         mainPanel.add(addanPanel, "addanPanel");
 
+        successPanel.setBackground(new java.awt.Color(0, 0, 0));
         successPanel.setPreferredSize(new java.awt.Dimension(732, 573));
         successPanel.setLayout(null);
 
-        successHeader.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        successHeader.setFont(new java.awt.Font("Georgia", 3, 36)); // NOI18N
+        successHeader.setForeground(new java.awt.Color(102, 153, 0));
         successHeader.setText("Success!");
         successPanel.add(successHeader);
-        successHeader.setBounds(6, 6, 156, 41);
+        successHeader.setBounds(6, 6, 170, 50);
 
         msg1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        msg1.setForeground(new java.awt.Color(255, 255, 255));
         msg1.setText("Thank you for using Zoogistics!");
         successPanel.add(msg1);
         msg1.setBounds(220, 109, 294, 22);
 
         msg2.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        msg2.setForeground(new java.awt.Color(255, 255, 255));
         msg2.setText("You have successfully");
         successPanel.add(msg2);
         msg2.setBounds(266, 149, 206, 22);
 
+        rtnhomeButton.setBackground(new java.awt.Color(102, 153, 0));
         rtnhomeButton.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        rtnhomeButton.setForeground(new java.awt.Color(255, 255, 255));
         rtnhomeButton.setText("Return Home");
         rtnhomeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -597,6 +636,11 @@ public class zoogisticsFrame extends JFrame {
     private javax.swing.JLabel addanHeader;
     private javax.swing.JPanel addanPanel;
     private javax.swing.JTextField animalSearch2;
+    private javax.swing.JLabel bgImage1;
+    private javax.swing.JLabel bgImage2;
+    private javax.swing.JLabel bgImage3;
+    private javax.swing.JLabel bgImage4;
+    private javax.swing.JLabel bgImage5;
     private javax.swing.JPanel dataEntriesPanel;
     private javax.swing.JTextField exhibitSearch;
     private javax.swing.JLabel hint;
