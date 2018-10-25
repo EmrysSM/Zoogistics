@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 public class zoogisticsView extends JFrame implements ActionListener {
     JLabel title;
     JButton logButton, moveButton, nxtupButton, addButton;
-    JPanel mainPanel, logPanel, mvPanel, vwPanel, addPanel;
+    public JPanel mainPanel, logPanel, mvPanel, vwPanel, addPanel;
     ZooController cont;
     
     //TODO: Spread buttons out, make them larger? Change font on button text
