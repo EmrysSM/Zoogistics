@@ -23,14 +23,13 @@ DROP TABLE IF EXISTS `food_tb`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `food_tb` (
-  `main_tb_id` int(11) NOT NULL,
-  `Meat` tinyint(4) DEFAULT NULL,
+  `Type` varchar(45) NOT NULL,
   `Bamboo` tinyint(4) DEFAULT NULL,
-  `Grass` tinyint(4) DEFAULT NULL,
   `Fruit` tinyint(4) DEFAULT NULL,
+  `Grass` tinyint(4) DEFAULT NULL,
+  `Meat` tinyint(4) DEFAULT NULL,
   `Vegetable` tinyint(4) DEFAULT NULL,
-  PRIMARY KEY (`main_tb_id`),
-  CONSTRAINT `fk_food_tb_main_tb` FOREIGN KEY (`main_tb_id`) REFERENCES `main_tb` (`id`)
+  PRIMARY KEY (`Type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -40,7 +39,7 @@ CREATE TABLE `food_tb` (
 
 LOCK TABLES `food_tb` WRITE;
 /*!40000 ALTER TABLE `food_tb` DISABLE KEYS */;
-INSERT INTO `food_tb` VALUES (1,1,0,1,0,1),(2,1,0,0,1,1),(3,1,0,0,0,0),(4,0,1,0,1,1);
+INSERT INTO `food_tb` VALUES ('Gorilla',0,1,0,1,1),('Kangraroo',0,1,1,0,1),('Monkey',1,1,0,1,1),('Zebra',0,0,1,0,0);
 /*!40000 ALTER TABLE `food_tb` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-15 14:05:11
+-- Dump completed on 2018-10-22 20:46:29
