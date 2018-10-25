@@ -48,6 +48,7 @@ public class zoogisticsFrame extends JFrame {
         nxtupButton = new javax.swing.JButton();
         mvButton = new javax.swing.JButton();
         addanButton = new javax.swing.JButton();
+        bgImage1 = new javax.swing.JLabel();
         logPanel = new javax.swing.JPanel();
         logHeader = new javax.swing.JLabel();
         homeButton1 = new javax.swing.JButton();
@@ -57,6 +58,9 @@ public class zoogisticsFrame extends JFrame {
         question1 = new javax.swing.JLabel();
         searchAnimal = new javax.swing.JTextField();
         submitButton3 = new javax.swing.JButton();
+        hint = new javax.swing.JLabel();
+        searchIcon1 = new javax.swing.JLabel();
+        bgImage2 = new javax.swing.JLabel();
         mvPanel = new javax.swing.JPanel();
         mvHeader = new javax.swing.JLabel();
         homeButton2 = new javax.swing.JButton();
@@ -65,10 +69,16 @@ public class zoogisticsFrame extends JFrame {
         question4 = new javax.swing.JLabel();
         exhibitSearch = new javax.swing.JTextField();
         submitButton2 = new javax.swing.JButton();
+        hint1 = new javax.swing.JLabel();
+        hint2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        bgImage3 = new javax.swing.JLabel();
         nxtupPanel = new javax.swing.JPanel();
         nxtupHeader = new javax.swing.JLabel();
         homeButton3 = new javax.swing.JButton();
         dataEntriesPanel = new javax.swing.JPanel();
+        bgImage4 = new javax.swing.JLabel();
         addanPanel = new javax.swing.JPanel();
         addanHeader = new javax.swing.JLabel();
         homeButton4 = new javax.swing.JButton();
@@ -86,6 +96,8 @@ public class zoogisticsFrame extends JFrame {
         jTfType = new javax.swing.JTextField();
         jLabelSex = new javax.swing.JLabel();
         jTfSex = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        bgImage5 = new javax.swing.JLabel();
         successPanel = new javax.swing.JPanel();
         successHeader = new javax.swing.JLabel();
         msg1 = new javax.swing.JLabel();
@@ -97,80 +109,83 @@ public class zoogisticsFrame extends JFrame {
 
         mainPanel.setLayout(new java.awt.CardLayout());
 
+        homePanel.setPreferredSize(new java.awt.Dimension(732, 500));
+        homePanel.setLayout(null);
+
         titleLabel.setFont(new java.awt.Font("Georgia", 1, 48)); // NOI18N
         titleLabel.setText("Zoogistics");
+        homePanel.add(titleLabel);
+        titleLabel.setBounds(250, 0, 260, 100);
 
+        logButton.setBackground(new java.awt.Color(0, 0, 0));
         logButton.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        logButton.setForeground(new java.awt.Color(255, 255, 255));
         logButton.setText("Log Activity");
+        logButton.setPreferredSize(new java.awt.Dimension(110, 30));
+        logButton.setSize(new java.awt.Dimension(260, 70));
         logButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 logButtonActionPerformed(evt);
             }
         });
+        homePanel.add(logButton);
+        logButton.setBounds(40, 140, 260, 70);
 
+        nxtupButton.setBackground(new java.awt.Color(0, 0, 0));
         nxtupButton.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        nxtupButton.setForeground(new java.awt.Color(255, 255, 255));
         nxtupButton.setText("Next Up");
+        nxtupButton.setSize(new java.awt.Dimension(260, 70));
         nxtupButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nxtupButtonActionPerformed(evt);
             }
         });
+        homePanel.add(nxtupButton);
+        nxtupButton.setBounds(40, 280, 250, 90);
 
+        mvButton.setBackground(new java.awt.Color(0, 0, 0));
         mvButton.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        mvButton.setForeground(new java.awt.Color(255, 255, 255));
         mvButton.setText("Move Animal");
         mvButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mvButtonActionPerformed(evt);
             }
         });
+        homePanel.add(mvButton);
+        mvButton.setBounds(430, 140, 260, 70);
 
+        addanButton.setBackground(new java.awt.Color(0, 0, 0));
         addanButton.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        addanButton.setForeground(new java.awt.Color(255, 255, 255));
         addanButton.setText("Add Animal");
+        addanButton.setMaximumSize(new java.awt.Dimension(164, 30));
+        addanButton.setMinimumSize(new java.awt.Dimension(164, 30));
+        addanButton.setPreferredSize(new java.awt.Dimension(164, 30));
+        addanButton.setSize(new java.awt.Dimension(260, 70));
         addanButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addanButtonActionPerformed(evt);
             }
         });
+        homePanel.add(addanButton);
+        addanButton.setBounds(430, 280, 260, 70);
 
-        javax.swing.GroupLayout homePanelLayout = new javax.swing.GroupLayout(homePanel);
-        homePanel.setLayout(homePanelLayout);
-        homePanelLayout.setHorizontalGroup(
-            homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(homePanelLayout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addGroup(homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(nxtupButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(logButton, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(mvButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(addanButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, homePanelLayout.createSequentialGroup()
-                .addContainerGap(235, Short.MAX_VALUE)
-                .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(232, 232, 232))
-        );
-        homePanelLayout.setVerticalGroup(
-            homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(homePanelLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(logButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mvButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(62, 62, 62)
-                .addGroup(homePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nxtupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(addanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(304, Short.MAX_VALUE))
-        );
+        bgImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/bg4.png"))); // NOI18N
+        homePanel.add(bgImage1);
+        bgImage1.setBounds(0, 0, 730, 580);
 
         mainPanel.add(homePanel, "homePanel");
 
+        logPanel.setMaximumSize(new java.awt.Dimension(3000, 3000));
+        logPanel.setPreferredSize(new java.awt.Dimension(732, 573));
+        logPanel.setLayout(null);
+
         logHeader.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         logHeader.setText("Log an Activity");
+        logPanel.add(logHeader);
+        logHeader.setBounds(6, 6, 286, 62);
 
         homeButton1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         homeButton1.setText("Home");
@@ -179,8 +194,12 @@ public class zoogisticsFrame extends JFrame {
                 homeButton1ActionPerformed(evt);
             }
         });
+        logPanel.add(homeButton1);
+        homeButton1.setBounds(541, 488, 97, 30);
 
-        question2.setText("Step 2: Who would you like to log an activity for? (you can search by name, type or ID)");
+        question2.setText("Step 2: Who would you like to log an activity for?");
+        logPanel.add(question2);
+        question2.setBounds(33, 169, 307, 16);
 
         logFeed.setText("Log Feeding");
         logFeed.addActionListener(new java.awt.event.ActionListener() {
@@ -188,69 +207,46 @@ public class zoogisticsFrame extends JFrame {
                 logFeedActionPerformed(evt);
             }
         });
+        logPanel.add(logFeed);
+        logFeed.setBounds(91, 114, 108, 23);
 
         logMedication.setText("Log Medication");
+        logPanel.add(logMedication);
+        logMedication.setBounds(354, 114, 128, 23);
 
-        question1.setText("Step 1: What kind of activity are you logging?");
+        question1.setText("Step 1: What kind of activity are you logging? (Choose 1)");
+        logPanel.add(question1);
+        question1.setBounds(33, 92, 355, 16);
+        logPanel.add(searchAnimal);
+        searchAnimal.setBounds(61, 213, 518, 48);
 
         submitButton3.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         submitButton3.setText("Submit");
+        logPanel.add(submitButton3);
+        submitButton3.setBounds(369, 488, 108, 30);
 
-        javax.swing.GroupLayout logPanelLayout = new javax.swing.GroupLayout(logPanel);
-        logPanel.setLayout(logPanelLayout);
-        logPanelLayout.setHorizontalGroup(
-            logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(logPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(logHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(440, Short.MAX_VALUE))
-            .addGroup(logPanelLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(searchAnimal)
-                    .addComponent(question1)
-                    .addComponent(question2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, logPanelLayout.createSequentialGroup()
-                .addGroup(logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(logPanelLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(submitButton3)
-                        .addGap(64, 64, 64)
-                        .addComponent(homeButton1))
-                    .addGroup(logPanelLayout.createSequentialGroup()
-                        .addGap(91, 91, 91)
-                        .addComponent(logFeed)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(logMedication)))
-                .addGap(94, 94, 94))
-        );
-        logPanelLayout.setVerticalGroup(
-            logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(logPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(logHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
-                .addComponent(question1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(logFeed)
-                    .addComponent(logMedication))
-                .addGap(32, 32, 32)
-                .addComponent(question2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(searchAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 243, Short.MAX_VALUE)
-                .addGroup(logPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(submitButton3)
-                    .addComponent(homeButton1))
-                .addGap(55, 55, 55))
-        );
+        hint.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        hint.setText("you can search by name, type or ID");
+        logPanel.add(hint);
+        hint.setBounds(33, 191, 238, 16);
+
+        searchIcon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/searchIcon.png"))); // NOI18N
+        logPanel.add(searchIcon1);
+        searchIcon1.setBounds(31, 213, 24, 48);
+
+        bgImage2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/bg4.png"))); // NOI18N
+        logPanel.add(bgImage2);
+        bgImage2.setBounds(0, -4, 730, 580);
 
         mainPanel.add(logPanel, "logPanel");
 
+        mvPanel.setPreferredSize(new java.awt.Dimension(732, 573));
+        mvPanel.setLayout(null);
+
         mvHeader.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         mvHeader.setText("Move an Animal");
+        mvPanel.add(mvHeader);
+        mvHeader.setBounds(36, 6, 322, 72);
 
         homeButton2.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         homeButton2.setText("Home");
@@ -259,16 +255,26 @@ public class zoogisticsFrame extends JFrame {
                 homeButton2ActionPerformed(evt);
             }
         });
+        mvPanel.add(homeButton2);
+        homeButton2.setBounds(555, 484, 97, 30);
 
         question3.setText("Step 1: Who would you like to move?");
+        mvPanel.add(question3);
+        question3.setBounds(42, 90, 230, 16);
 
         animalSearch2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 animalSearch2ActionPerformed(evt);
             }
         });
+        mvPanel.add(animalSearch2);
+        animalSearch2.setBounds(64, 131, 480, 54);
 
         question4.setText("Step 2: Where To?");
+        mvPanel.add(question4);
+        question4.setBounds(36, 224, 110, 16);
+        mvPanel.add(exhibitSearch);
+        exhibitSearch.setBounds(72, 266, 472, 54);
 
         submitButton2.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         submitButton2.setText("Submit");
@@ -277,53 +283,39 @@ public class zoogisticsFrame extends JFrame {
                 submitButton2ActionPerformed(evt);
             }
         });
+        mvPanel.add(submitButton2);
+        submitButton2.setBounds(410, 484, 108, 30);
 
-        javax.swing.GroupLayout mvPanelLayout = new javax.swing.GroupLayout(mvPanel);
-        mvPanel.setLayout(mvPanelLayout);
-        mvPanelLayout.setHorizontalGroup(
-            mvPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mvPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(mvPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(exhibitSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 522, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(animalSearch2, javax.swing.GroupLayout.PREFERRED_SIZE, 522, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(mvPanelLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(question3))
-                    .addComponent(mvHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(question4))
-                .addContainerGap(204, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mvPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(submitButton2)
-                .addGap(37, 37, 37)
-                .addComponent(homeButton2)
-                .addGap(80, 80, 80))
-        );
-        mvPanelLayout.setVerticalGroup(
-            mvPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mvPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(mvHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(question3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(animalSearch2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
-                .addComponent(question4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(exhibitSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 199, Short.MAX_VALUE)
-                .addGroup(mvPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(submitButton2)
-                    .addComponent(homeButton2))
-                .addGap(59, 59, 59))
-        );
+        hint1.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        hint1.setText("you can search by name, type or ID");
+        mvPanel.add(hint1);
+        hint1.setBounds(42, 109, 238, 16);
+
+        hint2.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
+        hint2.setText("search by exhibit name");
+        mvPanel.add(hint2);
+        hint2.setBounds(36, 244, 159, 16);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/searchIcon.png"))); // NOI18N
+        mvPanel.add(jLabel3);
+        jLabel3.setBounds(42, 131, 24, 54);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/searchIcon.png"))); // NOI18N
+        mvPanel.add(jLabel4);
+        jLabel4.setBounds(36, 266, 24, 54);
+
+        bgImage3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/bg4.png"))); // NOI18N
+        mvPanel.add(bgImage3);
+        bgImage3.setBounds(-10, -4, 740, 580);
 
         mainPanel.add(mvPanel, "mvPanel");
 
+        nxtupPanel.setLayout(null);
+
         nxtupHeader.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         nxtupHeader.setText("What's Next Up");
+        nxtupPanel.add(nxtupHeader);
+        nxtupHeader.setBounds(6, 6, 286, 41);
 
         homeButton3.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         homeButton3.setText("Home");
@@ -332,6 +324,8 @@ public class zoogisticsFrame extends JFrame {
                 homeButton3ActionPerformed(evt);
             }
         });
+        nxtupPanel.add(homeButton3);
+        homeButton3.setBounds(629, 323, 97, 30);
 
         dataEntriesPanel.setBackground(new java.awt.Color(218, 243, 249));
 
@@ -346,41 +340,23 @@ public class zoogisticsFrame extends JFrame {
             .addGap(0, 233, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout nxtupPanelLayout = new javax.swing.GroupLayout(nxtupPanel);
-        nxtupPanel.setLayout(nxtupPanelLayout);
-        nxtupPanelLayout.setHorizontalGroup(
-            nxtupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(nxtupPanelLayout.createSequentialGroup()
-                .addGroup(nxtupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, nxtupPanelLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(homeButton3))
-                    .addGroup(nxtupPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(nxtupHeader)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(nxtupPanelLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(dataEntriesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(147, Short.MAX_VALUE))
-        );
-        nxtupPanelLayout.setVerticalGroup(
-            nxtupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(nxtupPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(nxtupHeader)
-                .addGap(31, 31, 31)
-                .addComponent(dataEntriesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(homeButton3)
-                .addContainerGap())
-        );
+        nxtupPanel.add(dataEntriesPanel);
+        dataEntriesPanel.setBounds(22, 78, 563, 233);
+
+        bgImage4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/bg4.png"))); // NOI18N
+        nxtupPanel.add(bgImage4);
+        bgImage4.setBounds(0, -4, 730, 580);
 
         mainPanel.add(nxtupPanel, "nxtupPanel");
 
+        addanPanel.setPreferredSize(new java.awt.Dimension(732, 573));
+        addanPanel.setRequestFocusEnabled(false);
+        addanPanel.setLayout(null);
+
         addanHeader.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         addanHeader.setText("Add New Animal");
+        addanPanel.add(addanHeader);
+        addanHeader.setBounds(6, 6, 310, 41);
 
         homeButton4.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         homeButton4.setText("Home");
@@ -389,45 +365,65 @@ public class zoogisticsFrame extends JFrame {
                 homeButton4ActionPerformed(evt);
             }
         });
+        addanPanel.add(homeButton4);
+        homeButton4.setBounds(500, 469, 97, 30);
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel1.setText("All fields are required! ");
+        addanPanel.add(jLabel1);
+        jLabel1.setBounds(6, 53, 217, 22);
 
         jLabelName.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabelName.setText("Name:");
+        addanPanel.add(jLabelName);
+        jLabelName.setBounds(6, 158, 61, 21);
 
         jLabelExhibit.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabelExhibit.setText("Exhibit:");
+        addanPanel.add(jLabelExhibit);
+        jLabelExhibit.setBounds(6, 229, 74, 21);
 
         jLabelLf.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabelLf.setText("Last Feeding:");
+        addanPanel.add(jLabelLf);
+        jLabelLf.setBounds(6, 298, 123, 21);
 
         jLabelnxtAct.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabelnxtAct.setText("Next Activity:");
+        addanPanel.add(jLabelnxtAct);
+        jLabelnxtAct.setBounds(6, 385, 125, 31);
 
         jTfName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTfNameActionPerformed(evt);
             }
         });
+        addanPanel.add(jTfName);
+        jTfName.setBounds(88, 149, 449, 43);
 
         jTfNxtAct.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTfNxtActActionPerformed(evt);
             }
         });
+        addanPanel.add(jTfNxtAct);
+        jTfNxtAct.setBounds(137, 381, 417, 43);
 
         jTfFeed.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTfFeedActionPerformed(evt);
             }
         });
+        addanPanel.add(jTfFeed);
+        jTfFeed.setBounds(135, 289, 402, 43);
 
         jTfExhibit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTfExhibitActionPerformed(evt);
             }
         });
+        addanPanel.add(jTfExhibit);
+        jTfExhibit.setBounds(122, 210, 415, 43);
 
         submitButton.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         submitButton.setText("Submit");
@@ -436,157 +432,68 @@ public class zoogisticsFrame extends JFrame {
                 submitButtonActionPerformed(evt);
             }
         });
+        addanPanel.add(submitButton);
+        submitButton.setBounds(343, 469, 108, 30);
 
         jLabelType.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabelType.setText("Type:");
+        addanPanel.add(jLabelType);
+        jLabelType.setBounds(88, 97, 83, 27);
+        addanPanel.add(jTfType);
+        jTfType.setBounds(189, 93, 106, 38);
 
         jLabelSex.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabelSex.setText("Sex:");
+        addanPanel.add(jLabelSex);
+        jLabelSex.setBounds(360, 100, 40, 21);
+        addanPanel.add(jTfSex);
+        jTfSex.setBounds(431, 93, 106, 38);
 
-        javax.swing.GroupLayout addanPanelLayout = new javax.swing.GroupLayout(addanPanel);
-        addanPanel.setLayout(addanPanelLayout);
-        addanPanelLayout.setHorizontalGroup(
-            addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(addanPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(addanPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addanPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addanPanelLayout.createSequentialGroup()
-                                .addComponent(jLabelName)
-                                .addGap(63, 63, 63))
-                            .addGroup(addanPanelLayout.createSequentialGroup()
-                                .addComponent(jLabelExhibit)
-                                .addGap(50, 50, 50)))
-                        .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTfName, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(addanPanelLayout.createSequentialGroup()
-                                .addComponent(jLabelType, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTfType, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(64, 64, 64)
-                                .addComponent(jLabelSex)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTfSex, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(185, 185, 185))
-                    .addGroup(addanPanelLayout.createSequentialGroup()
-                        .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, addanPanelLayout.createSequentialGroup()
-                                .addComponent(jLabelnxtAct)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTfNxtAct, javax.swing.GroupLayout.DEFAULT_SIZE, 417, Short.MAX_VALUE))
-                            .addComponent(addanHeader, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, addanPanelLayout.createSequentialGroup()
-                                .addComponent(jLabelLf)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTfExhibit, javax.swing.GroupLayout.DEFAULT_SIZE, 419, Short.MAX_VALUE)
-                                    .addComponent(jTfFeed))))
-                        .addGap(0, 0, Short.MAX_VALUE))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addanPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(submitButton)
-                .addGap(49, 49, 49)
-                .addComponent(homeButton4)
-                .addGap(135, 135, 135))
-        );
-        addanPanelLayout.setVerticalGroup(
-            addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(addanPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(addanHeader)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTfSex, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabelType, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTfType, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabelSex)))
-                .addGap(12, 12, 12)
-                .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTfName, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelName))
-                .addGap(18, 18, 18)
-                .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTfExhibit, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelExhibit))
-                .addGap(47, 47, 47)
-                .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelLf)
-                    .addComponent(jTfFeed, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
-                .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTfNxtAct, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelnxtAct, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(77, 77, 77)
-                .addGroup(addanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(submitButton)
-                    .addComponent(homeButton4))
-                .addGap(74, 74, 74))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/searchIcon.png"))); // NOI18N
+        addanPanel.add(jLabel2);
+        jLabel2.setBounds(92, 210, 24, 43);
+
+        bgImage5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/bg4.png"))); // NOI18N
+        addanPanel.add(bgImage5);
+        bgImage5.setBounds(0, -4, 730, 580);
 
         mainPanel.add(addanPanel, "addanPanel");
 
-        successHeader.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        successPanel.setBackground(new java.awt.Color(0, 0, 0));
+        successPanel.setPreferredSize(new java.awt.Dimension(732, 573));
+        successPanel.setLayout(null);
+
+        successHeader.setFont(new java.awt.Font("Georgia", 3, 36)); // NOI18N
+        successHeader.setForeground(new java.awt.Color(102, 153, 0));
         successHeader.setText("Success!");
+        successPanel.add(successHeader);
+        successHeader.setBounds(6, 6, 170, 50);
 
         msg1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        msg1.setForeground(new java.awt.Color(255, 255, 255));
         msg1.setText("Thank you for using Zoogistics!");
+        successPanel.add(msg1);
+        msg1.setBounds(220, 109, 294, 22);
 
         msg2.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        msg2.setForeground(new java.awt.Color(255, 255, 255));
         msg2.setText("You have successfully");
+        successPanel.add(msg2);
+        msg2.setBounds(266, 149, 206, 22);
 
+        rtnhomeButton.setBackground(new java.awt.Color(102, 153, 0));
         rtnhomeButton.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        rtnhomeButton.setForeground(new java.awt.Color(255, 255, 255));
         rtnhomeButton.setText("Return Home");
         rtnhomeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rtnhomeButtonActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout successPanelLayout = new javax.swing.GroupLayout(successPanel);
-        successPanel.setLayout(successPanelLayout);
-        successPanelLayout.setHorizontalGroup(
-            successPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(successPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(successPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(successPanelLayout.createSequentialGroup()
-                        .addComponent(successHeader)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, successPanelLayout.createSequentialGroup()
-                        .addGap(0, 214, Short.MAX_VALUE)
-                        .addGroup(successPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(rtnhomeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(msg1)
-                            .addGroup(successPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(msg2contd, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, successPanelLayout.createSequentialGroup()
-                                    .addComponent(msg2)
-                                    .addGap(42, 42, 42))))
-                        .addGap(218, 218, 218))))
-        );
-        successPanelLayout.setVerticalGroup(
-            successPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(successPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(successHeader)
-                .addGap(62, 62, 62)
-                .addComponent(msg1)
-                .addGap(18, 18, 18)
-                .addComponent(msg2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(msg2contd, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(80, 80, 80)
-                .addComponent(rtnhomeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(214, Short.MAX_VALUE))
-        );
+        successPanel.add(rtnhomeButton);
+        rtnhomeButton.setBounds(240, 285, 274, 74);
+        successPanel.add(msg2contd);
+        msg2contd.setBounds(266, 177, 0, 28);
 
         mainPanel.add(successPanel, "successPanel");
 
@@ -634,11 +541,6 @@ public class zoogisticsFrame extends JFrame {
         card.show(mainPanel, "homePanel");
     }//GEN-LAST:event_homeButton1ActionPerformed
 
-    private void homeButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButton2ActionPerformed
-        CardLayout card = (CardLayout)mainPanel.getLayout();
-        card.show(mainPanel, "homePanel");
-    }//GEN-LAST:event_homeButton2ActionPerformed
-
     private void homeButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButton3ActionPerformed
         CardLayout card = (CardLayout)mainPanel.getLayout();
         card.show(mainPanel, "homePanel");
@@ -652,10 +554,6 @@ public class zoogisticsFrame extends JFrame {
     private void logFeedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logFeedActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_logFeedActionPerformed
-
-    private void animalSearch2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_animalSearch2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_animalSearch2ActionPerformed
 
     private void jTfNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTfNameActionPerformed
         // TODO add your handling code here:
@@ -687,6 +585,15 @@ public class zoogisticsFrame extends JFrame {
         CardLayout card = (CardLayout)mainPanel.getLayout();
         card.show(mainPanel, "successPanel");
     }//GEN-LAST:event_submitButton2ActionPerformed
+
+    private void animalSearch2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_animalSearch2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_animalSearch2ActionPerformed
+
+    private void homeButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButton2ActionPerformed
+        CardLayout card = (CardLayout)mainPanel.getLayout();
+        card.show(mainPanel, "homePanel");
+    }//GEN-LAST:event_homeButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -729,14 +636,25 @@ public class zoogisticsFrame extends JFrame {
     private javax.swing.JLabel addanHeader;
     private javax.swing.JPanel addanPanel;
     private javax.swing.JTextField animalSearch2;
+    private javax.swing.JLabel bgImage1;
+    private javax.swing.JLabel bgImage2;
+    private javax.swing.JLabel bgImage3;
+    private javax.swing.JLabel bgImage4;
+    private javax.swing.JLabel bgImage5;
     private javax.swing.JPanel dataEntriesPanel;
     private javax.swing.JTextField exhibitSearch;
+    private javax.swing.JLabel hint;
+    private javax.swing.JLabel hint1;
+    private javax.swing.JLabel hint2;
     private javax.swing.JButton homeButton1;
     private javax.swing.JButton homeButton2;
     private javax.swing.JButton homeButton3;
     private javax.swing.JButton homeButton4;
     private javax.swing.JPanel homePanel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabelExhibit;
     private javax.swing.JLabel jLabelLf;
     private javax.swing.JLabel jLabelName;
@@ -770,6 +688,7 @@ public class zoogisticsFrame extends JFrame {
     private javax.swing.JLabel question4;
     private javax.swing.JButton rtnhomeButton;
     private javax.swing.JTextField searchAnimal;
+    private javax.swing.JLabel searchIcon1;
     private javax.swing.JButton submitButton;
     private javax.swing.JButton submitButton2;
     private javax.swing.JButton submitButton3;
