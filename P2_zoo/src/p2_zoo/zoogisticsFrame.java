@@ -287,14 +287,14 @@ public class zoogisticsFrame extends JFrame {
         submitButton2.setBounds(410, 484, 108, 30);
 
         hint1.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
-        hint1.setText("you can search by name, type or ID");
+        hint1.setText("Insert the name of the Animal you would like to move");
         mvPanel.add(hint1);
-        hint1.setBounds(42, 109, 238, 16);
+        hint1.setBounds(42, 109, 380, 16);
 
         hint2.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
-        hint2.setText("search by exhibit name");
+        hint2.setText("Insert the name of the Exhibit you'd like to move the animal to");
         mvPanel.add(hint2);
-        hint2.setBounds(36, 244, 159, 16);
+        hint2.setBounds(36, 244, 440, 16);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/searchIcon.png"))); // NOI18N
         mvPanel.add(jLabel3);
