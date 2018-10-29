@@ -16,6 +16,8 @@ import javax.swing.JFrame;
  */
 public class zoogisticsFrame extends JFrame {
 
+    ZooController control = new ZooController();
+
     /**
      * Creates new form zoogisticsFrame
      */
@@ -122,7 +124,6 @@ public class zoogisticsFrame extends JFrame {
         logButton.setForeground(new java.awt.Color(255, 255, 255));
         logButton.setText("Log Activity");
         logButton.setPreferredSize(new java.awt.Dimension(110, 30));
-        logButton.setSize(new java.awt.Dimension(260, 70));
         logButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 logButtonActionPerformed(evt);
@@ -135,7 +136,6 @@ public class zoogisticsFrame extends JFrame {
         nxtupButton.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         nxtupButton.setForeground(new java.awt.Color(255, 255, 255));
         nxtupButton.setText("Next Up");
-        nxtupButton.setSize(new java.awt.Dimension(260, 70));
         nxtupButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nxtupButtonActionPerformed(evt);
@@ -163,7 +163,6 @@ public class zoogisticsFrame extends JFrame {
         addanButton.setMaximumSize(new java.awt.Dimension(164, 30));
         addanButton.setMinimumSize(new java.awt.Dimension(164, 30));
         addanButton.setPreferredSize(new java.awt.Dimension(164, 30));
-        addanButton.setSize(new java.awt.Dimension(260, 70));
         addanButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addanButtonActionPerformed(evt);
@@ -195,11 +194,11 @@ public class zoogisticsFrame extends JFrame {
             }
         });
         logPanel.add(homeButton1);
-        homeButton1.setBounds(541, 488, 97, 30);
+        homeButton1.setBounds(541, 488, 82, 40);
 
         question2.setText("Step 2: Who would you like to log an activity for?");
         logPanel.add(question2);
-        question2.setBounds(33, 169, 307, 16);
+        question2.setBounds(33, 169, 271, 16);
 
         logFeed.setText("Log Feeding");
         logFeed.addActionListener(new java.awt.event.ActionListener() {
@@ -208,27 +207,33 @@ public class zoogisticsFrame extends JFrame {
             }
         });
         logPanel.add(logFeed);
-        logFeed.setBounds(91, 114, 108, 23);
+        logFeed.setBounds(91, 114, 100, 28);
 
         logMedication.setText("Log Medication");
         logPanel.add(logMedication);
-        logMedication.setBounds(354, 114, 128, 23);
+        logMedication.setBounds(354, 114, 118, 28);
 
         question1.setText("Step 1: What kind of activity are you logging? (Choose 1)");
         logPanel.add(question1);
-        question1.setBounds(33, 92, 355, 16);
+        question1.setBounds(33, 92, 316, 16);
+
+        searchAnimal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                searchAnimalKeyTyped(evt);
+            }
+        });
         logPanel.add(searchAnimal);
         searchAnimal.setBounds(61, 213, 518, 48);
 
         submitButton3.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         submitButton3.setText("Submit");
         logPanel.add(submitButton3);
-        submitButton3.setBounds(369, 488, 108, 30);
+        submitButton3.setBounds(369, 488, 92, 40);
 
         hint.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         hint.setText("you can search by name, type or ID");
         logPanel.add(hint);
-        hint.setBounds(33, 191, 238, 16);
+        hint.setBounds(33, 191, 217, 18);
 
         searchIcon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/searchIcon.png"))); // NOI18N
         logPanel.add(searchIcon1);
@@ -256,11 +261,11 @@ public class zoogisticsFrame extends JFrame {
             }
         });
         mvPanel.add(homeButton2);
-        homeButton2.setBounds(555, 484, 97, 30);
+        homeButton2.setBounds(555, 484, 82, 40);
 
         question3.setText("Step 1: Who would you like to move?");
         mvPanel.add(question3);
-        question3.setBounds(42, 90, 230, 16);
+        question3.setBounds(42, 90, 206, 16);
 
         animalSearch2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -272,7 +277,7 @@ public class zoogisticsFrame extends JFrame {
 
         question4.setText("Step 2: Where To?");
         mvPanel.add(question4);
-        question4.setBounds(36, 224, 110, 16);
+        question4.setBounds(36, 224, 104, 16);
         mvPanel.add(exhibitSearch);
         exhibitSearch.setBounds(72, 266, 472, 54);
 
@@ -284,17 +289,17 @@ public class zoogisticsFrame extends JFrame {
             }
         });
         mvPanel.add(submitButton2);
-        submitButton2.setBounds(410, 484, 108, 30);
+        submitButton2.setBounds(410, 484, 92, 40);
 
         hint1.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         hint1.setText("you can search by name, type or ID");
         mvPanel.add(hint1);
-        hint1.setBounds(42, 109, 238, 16);
+        hint1.setBounds(42, 109, 217, 18);
 
         hint2.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         hint2.setText("search by exhibit name");
         mvPanel.add(hint2);
-        hint2.setBounds(36, 244, 159, 16);
+        hint2.setBounds(36, 244, 143, 18);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/searchIcon.png"))); // NOI18N
         mvPanel.add(jLabel3);
@@ -315,7 +320,7 @@ public class zoogisticsFrame extends JFrame {
         nxtupHeader.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         nxtupHeader.setText("What's Next Up");
         nxtupPanel.add(nxtupHeader);
-        nxtupHeader.setBounds(6, 6, 286, 41);
+        nxtupHeader.setBounds(6, 6, 287, 41);
 
         homeButton3.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         homeButton3.setText("Home");
@@ -325,7 +330,7 @@ public class zoogisticsFrame extends JFrame {
             }
         });
         nxtupPanel.add(homeButton3);
-        homeButton3.setBounds(629, 323, 97, 30);
+        homeButton3.setBounds(629, 323, 82, 40);
 
         dataEntriesPanel.setBackground(new java.awt.Color(218, 243, 249));
 
@@ -366,12 +371,12 @@ public class zoogisticsFrame extends JFrame {
             }
         });
         addanPanel.add(homeButton4);
-        homeButton4.setBounds(500, 469, 97, 30);
+        homeButton4.setBounds(500, 469, 82, 40);
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel1.setText("All fields are required! ");
         addanPanel.add(jLabel1);
-        jLabel1.setBounds(6, 53, 217, 22);
+        jLabel1.setBounds(6, 53, 198, 24);
 
         jLabelName.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabelName.setText("Name:");
@@ -381,12 +386,12 @@ public class zoogisticsFrame extends JFrame {
         jLabelExhibit.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabelExhibit.setText("Exhibit:");
         addanPanel.add(jLabelExhibit);
-        jLabelExhibit.setBounds(6, 229, 74, 21);
+        jLabelExhibit.setBounds(6, 229, 75, 21);
 
         jLabelLf.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabelLf.setText("Last Feeding:");
         addanPanel.add(jLabelLf);
-        jLabelLf.setBounds(6, 298, 123, 21);
+        jLabelLf.setBounds(6, 298, 124, 21);
 
         jLabelnxtAct.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabelnxtAct.setText("Next Activity:");
@@ -433,7 +438,7 @@ public class zoogisticsFrame extends JFrame {
             }
         });
         addanPanel.add(submitButton);
-        submitButton.setBounds(343, 469, 108, 30);
+        submitButton.setBounds(343, 469, 92, 40);
 
         jLabelType.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabelType.setText("Type:");
@@ -473,13 +478,13 @@ public class zoogisticsFrame extends JFrame {
         msg1.setForeground(new java.awt.Color(255, 255, 255));
         msg1.setText("Thank you for using Zoogistics!");
         successPanel.add(msg1);
-        msg1.setBounds(220, 109, 294, 22);
+        msg1.setBounds(220, 109, 272, 24);
 
         msg2.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         msg2.setForeground(new java.awt.Color(255, 255, 255));
         msg2.setText("You have successfully");
         successPanel.add(msg2);
-        msg2.setBounds(266, 149, 206, 22);
+        msg2.setBounds(266, 149, 198, 24);
 
         rtnhomeButton.setBackground(new java.awt.Color(102, 153, 0));
         rtnhomeButton.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -557,18 +562,22 @@ public class zoogisticsFrame extends JFrame {
 
     private void jTfNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTfNameActionPerformed
         // TODO add your handling code here:
+        control.performAction(evt);
     }//GEN-LAST:event_jTfNameActionPerformed
 
     private void jTfNxtActActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTfNxtActActionPerformed
         // TODO add your handling code here:
+        control.performAction(evt);
     }//GEN-LAST:event_jTfNxtActActionPerformed
 
     private void jTfFeedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTfFeedActionPerformed
         // TODO add your handling code here:
+        control.performAction(evt);
     }//GEN-LAST:event_jTfFeedActionPerformed
 
     private void jTfExhibitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTfExhibitActionPerformed
         // TODO add your handling code here:
+        control.performAction(evt);
     }//GEN-LAST:event_jTfExhibitActionPerformed
 
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
@@ -588,12 +597,18 @@ public class zoogisticsFrame extends JFrame {
 
     private void animalSearch2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_animalSearch2ActionPerformed
         // TODO add your handling code here:
+        control.performAction(evt);
     }//GEN-LAST:event_animalSearch2ActionPerformed
 
     private void homeButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButton2ActionPerformed
         CardLayout card = (CardLayout)mainPanel.getLayout();
         card.show(mainPanel, "homePanel");
     }//GEN-LAST:event_homeButton2ActionPerformed
+
+    private void searchAnimalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchAnimalKeyTyped
+        // TODO add your handling code here:
+        control.searchAnimal(evt, searchAnimal.getText());
+    }//GEN-LAST:event_searchAnimalKeyTyped
 
     /**
      * @param args the command line arguments

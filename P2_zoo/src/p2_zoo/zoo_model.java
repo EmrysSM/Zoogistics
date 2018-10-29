@@ -160,7 +160,7 @@ public List<List<String>> read_Last_Feeding(String main_tb) throws SQLException{
     
      private Connection getConnection() {
         
-        String url = "jdbc:mysql://localhost/zoo_db" + ",root";
+        String url = "jdbc:mysql://localhost:3306/zoogistics" + ",root";
         Connection conn = null;
         try {
             conn = DriverManager.getConnection(url);
