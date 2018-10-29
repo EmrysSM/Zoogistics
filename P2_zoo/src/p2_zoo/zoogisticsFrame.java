@@ -77,7 +77,7 @@ public class zoogisticsFrame extends JFrame {
         nxtupPanel = new javax.swing.JPanel();
         nxtupHeader = new javax.swing.JLabel();
         homeButton3 = new javax.swing.JButton();
-        dataEntriesPanel = new javax.swing.JPanel();
+        dbTextField = new javax.swing.JTextField();
         bgImage4 = new javax.swing.JLabel();
         addanPanel = new javax.swing.JPanel();
         addanHeader = new javax.swing.JLabel();
@@ -325,23 +325,16 @@ public class zoogisticsFrame extends JFrame {
             }
         });
         nxtupPanel.add(homeButton3);
-        homeButton3.setBounds(629, 323, 97, 30);
+        homeButton3.setBounds(630, 380, 97, 30);
 
-        dataEntriesPanel.setBackground(new java.awt.Color(218, 243, 249));
-
-        javax.swing.GroupLayout dataEntriesPanelLayout = new javax.swing.GroupLayout(dataEntriesPanel);
-        dataEntriesPanel.setLayout(dataEntriesPanelLayout);
-        dataEntriesPanelLayout.setHorizontalGroup(
-            dataEntriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 563, Short.MAX_VALUE)
-        );
-        dataEntriesPanelLayout.setVerticalGroup(
-            dataEntriesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 233, Short.MAX_VALUE)
-        );
-
-        nxtupPanel.add(dataEntriesPanel);
-        dataEntriesPanel.setBounds(22, 78, 563, 233);
+        dbTextField.setEditable(false);
+        dbTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dbTextFieldActionPerformed(evt);
+            }
+        });
+        nxtupPanel.add(dbTextField);
+        dbTextField.setBounds(20, 60, 650, 310);
 
         bgImage4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/bg4.png"))); // NOI18N
         nxtupPanel.add(bgImage4);
@@ -595,6 +588,10 @@ public class zoogisticsFrame extends JFrame {
         card.show(mainPanel, "homePanel");
     }//GEN-LAST:event_homeButton2ActionPerformed
 
+    private void dbTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dbTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dbTextFieldActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -641,7 +638,7 @@ public class zoogisticsFrame extends JFrame {
     private javax.swing.JLabel bgImage3;
     private javax.swing.JLabel bgImage4;
     private javax.swing.JLabel bgImage5;
-    private javax.swing.JPanel dataEntriesPanel;
+    public javax.swing.JTextField dbTextField;
     public javax.swing.JTextField exhibitSearch;
     private javax.swing.JLabel hint;
     private javax.swing.JLabel hint1;
