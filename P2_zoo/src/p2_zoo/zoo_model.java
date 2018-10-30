@@ -1,23 +1,38 @@
+
+
+//add package here
+package p2_zoo;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package p2_zoo;
-import java.sql.*;
-import java.util.logging.*;
-import static javax.swing.text.StyleConstants.Size;
-
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
  * @author Tomng
  */
-public class zoo_model implements Serializable {
-
+public class zoo_model {
+    public static void main(String args[]) throws SQLException {
+        zoo_model model = new zoo_model();
+        model.getConnection();
+        //model.insertAnimal("Mike","Male","Move","2018-10-12 10:03:34","Gorilla","Harley_Field"); //works
+        //model.delete("main_tb",2); //works
+        //"Update "+Table+" SET "+col+" = "+value+" WHERE "+rowID+" = "+valueID+"";
+        //model.update("main_tb", "Sex", "m8", "main_ID", 21); //works
+        //model.read_Last_Feeding("main_tb"); //works
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -106,27 +121,27 @@ public class zoo_model implements Serializable {
     }
     
     
-    public void deleteAnimal(int aId){
+    public void deleteAnimal(Integer aId){
         
         try {
-           rs = st.executeQuery("DELETE FROM main_tb WHERE id="+aId+";");
+           rs = st.executeQuery("DELETE FROM main_tb WHERE main_ID="+aId+";");
        } catch (Exception e) {
            e.printStackTrace();
        }
     } 
 
     
-    public void insertAnimal(String aName, String type, String sex, String location, String last_feeding, String next_activity ) {
-        String sql = "INSERT INTO main_tb(name,type,sex,location,laste_feeding,next_activity) VALUES(?,?,?,?,?,?)";
+    public void insertAnimal(String aName, String sex, String next_activity, String last_feeding, String type, String location ) {
+        String sql = "INSERT INTO main_tb(name,sex,Next_Activity,Last_Feeding,Food_tb_type,IsFull_Location) VALUES(?,?,?,?,?,?)";
  
         try (Connection conn = getConnection();
                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1,aName);
-            pstmt.setString(2,type);
-            pstmt.setString(3,sex);
-            pstmt.setString(4,location);
-            pstmt.setString(5,last_feeding);
-            pstmt.setString(6,next_activity);
+            pstmt.setString(2,sex);
+            pstmt.setString(3,next_activity);
+            pstmt.setString(4,last_feeding);
+            pstmt.setString(5,type);
+            pstmt.setString(6,location);
             pstmt.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -136,7 +151,7 @@ public class zoo_model implements Serializable {
    
     // return ArrayList of 5 latest Last_Feeding
 public List<List<String>> read_Last_Feeding(String main_tb) throws SQLException{ 
-        String query="SELECT * FROM"+ main_tb+ "ORDER by Last_Feeding DESC LIMIT 5"; 
+        String query="SELECT * FROM "+ main_tb+ " ORDER by Last_Feeding DESC LIMIT 5"; 
         
         List<List<String>> output = new ArrayList<>(); // list of list, one per row
         
@@ -151,6 +166,8 @@ public List<List<String>> read_Last_Feeding(String main_tb) throws SQLException{
             }
           output.add(row); 
         }
+        
+        System.out.println(output);
         return output;
     }
     
@@ -158,17 +175,35 @@ public List<List<String>> read_Last_Feeding(String main_tb) throws SQLException{
     
 
     
-     private Connection getConnection() {
-        
-        String url = "jdbc:mysql://localhost/zoo_db" + ",root";
-        Connection conn = null;
+//     private Connection getConnection() {
+//                                                       //user     password
+//        String url = "jdbc:mysql://localhost/zoo_db" + ",root" + ",root";
+//        Connection conn = null;
+//        try {
+//            conn = DriverManager.getConnection(url);
+//        } catch (SQLException e) {
+//            System.out.println(e.getMessage());
+//        }
+//        return conn;
+//    }
+     
+     
+     public Connection getConnection(){
+           // connect to databese and set up Statement
+            Connection conn = null;
         try {
-            conn = DriverManager.getConnection(url);
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            Class.forName("com.mysql.jdbc.Driver");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/zoo_db?autoReconnect=true&useSSL=false","root","root");
+            st = conn.createStatement();
+
+        }catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            //conn.close();
+            System.exit(0);
         }
+      
         return conn;
-    }
+     }
     
     
     public ArrayList<Animal> getAnimalList()
@@ -198,6 +233,33 @@ public List<List<String>> read_Last_Feeding(String main_tb) throws SQLException{
    }
     
     
+    //INSERT INTO `zoo_db`.`main_tb` (`Name`, `Sex`, `Next_Activity`, `Last_Feeding`, `Food_tb_Type`, `IsFull_Location`) VALUES ('Jenny', 'Female', 'Move', '2018-10-14 02:33:34', 'Kangraroo', 'Jump_Around');
+
+    public int insert(String Table, ArrayList input) throws SQLException{
+        String query="insert into "+Table+" ";
+        query+= "values (";
+        query+="'"+input.get(0)+"'";
+        for(int i=1; i<input.size() ;i++){
+            query+=", '"+input.get(i)+"'";
+        }
+        query+= " )";
+        st.executeUpdate(query);
+        
+        return 0;
+    }
+    
+    public int delete(String Table, int input) throws SQLException{
+        String query="DELETE FROM " + Table + " WHERE main_ID=\""+ input +"\";";
+        st.executeUpdate(query);
+        return 0;
+    }
+    
+    public int update(String Table, String col, String value, String rowID, int valueID) throws SQLException{
+        String query="Update "+Table+" SET "+col+" = \'"+value+"\' WHERE "+rowID+" = "+valueID+"";
+        st.executeUpdate(query);
+        int out =0;
+        return out;
+    }
     
        
     
@@ -205,4 +267,5 @@ public List<List<String>> read_Last_Feeding(String main_tb) throws SQLException{
 
        
        
+    
 }
