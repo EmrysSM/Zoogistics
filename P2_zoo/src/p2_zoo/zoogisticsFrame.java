@@ -59,7 +59,6 @@ public class zoogisticsFrame extends JFrame {
         searchAnimal = new javax.swing.JTextField();
         submitButton3 = new javax.swing.JButton();
         hint = new javax.swing.JLabel();
-        searchIcon1 = new javax.swing.JLabel();
         bgImage2 = new javax.swing.JLabel();
         mvPanel = new javax.swing.JPanel();
         mvHeader = new javax.swing.JLabel();
@@ -71,8 +70,6 @@ public class zoogisticsFrame extends JFrame {
         submitButton2 = new javax.swing.JButton();
         hint1 = new javax.swing.JLabel();
         hint2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         bgImage3 = new javax.swing.JLabel();
         nxtupPanel = new javax.swing.JPanel();
         nxtupHeader = new javax.swing.JLabel();
@@ -96,7 +93,6 @@ public class zoogisticsFrame extends JFrame {
         jTfType = new javax.swing.JTextField();
         jLabelSex = new javax.swing.JLabel();
         jTfSex = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
         bgImage5 = new javax.swing.JLabel();
         successPanel = new javax.swing.JPanel();
         successHeader = new javax.swing.JLabel();
@@ -142,7 +138,7 @@ public class zoogisticsFrame extends JFrame {
             }
         });
         homePanel.add(nxtupButton);
-        nxtupButton.setBounds(40, 280, 250, 90);
+        nxtupButton.setBounds(40, 280, 260, 70);
 
         mvButton.setBackground(new java.awt.Color(0, 0, 0));
         mvButton.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -218,7 +214,7 @@ public class zoogisticsFrame extends JFrame {
         logPanel.add(question1);
         question1.setBounds(33, 92, 355, 16);
         logPanel.add(searchAnimal);
-        searchAnimal.setBounds(61, 213, 518, 48);
+        searchAnimal.setBounds(29, 213, 550, 48);
 
         submitButton3.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         submitButton3.setText("Submit");
@@ -229,10 +225,6 @@ public class zoogisticsFrame extends JFrame {
         hint.setText("you can search by name, type or ID");
         logPanel.add(hint);
         hint.setBounds(33, 191, 238, 16);
-
-        searchIcon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/searchIcon.png"))); // NOI18N
-        logPanel.add(searchIcon1);
-        searchIcon1.setBounds(31, 213, 24, 48);
 
         bgImage2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/bg4.png"))); // NOI18N
         logPanel.add(bgImage2);
@@ -268,13 +260,13 @@ public class zoogisticsFrame extends JFrame {
             }
         });
         mvPanel.add(animalSearch2);
-        animalSearch2.setBounds(64, 131, 480, 54);
+        animalSearch2.setBounds(44, 131, 500, 54);
 
         question4.setText("Step 2: Where To?");
         mvPanel.add(question4);
         question4.setBounds(36, 224, 110, 16);
         mvPanel.add(exhibitSearch);
-        exhibitSearch.setBounds(72, 266, 472, 54);
+        exhibitSearch.setBounds(44, 266, 500, 54);
 
         submitButton2.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         submitButton2.setText("Submit");
@@ -295,14 +287,6 @@ public class zoogisticsFrame extends JFrame {
         hint2.setText("Insert the name of the Exhibit you'd like to move the animal to");
         mvPanel.add(hint2);
         hint2.setBounds(36, 244, 440, 16);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/searchIcon.png"))); // NOI18N
-        mvPanel.add(jLabel3);
-        jLabel3.setBounds(42, 131, 24, 54);
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/searchIcon.png"))); // NOI18N
-        mvPanel.add(jLabel4);
-        jLabel4.setBounds(36, 266, 24, 54);
 
         bgImage3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/bg4.png"))); // NOI18N
         mvPanel.add(bgImage3);
@@ -416,7 +400,7 @@ public class zoogisticsFrame extends JFrame {
             }
         });
         addanPanel.add(jTfExhibit);
-        jTfExhibit.setBounds(122, 210, 415, 43);
+        jTfExhibit.setBounds(87, 210, 450, 43);
 
         submitButton.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         submitButton.setText("Submit");
@@ -441,10 +425,6 @@ public class zoogisticsFrame extends JFrame {
         jLabelSex.setBounds(360, 100, 40, 21);
         addanPanel.add(jTfSex);
         jTfSex.setBounds(431, 93, 106, 38);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/searchIcon.png"))); // NOI18N
-        addanPanel.add(jLabel2);
-        jLabel2.setBounds(92, 210, 24, 43);
 
         bgImage5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/bg4.png"))); // NOI18N
         addanPanel.add(bgImage5);
@@ -649,9 +629,6 @@ public class zoogisticsFrame extends JFrame {
     public javax.swing.JButton homeButton4;
     private javax.swing.JPanel homePanel;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabelExhibit;
     private javax.swing.JLabel jLabelLf;
     private javax.swing.JLabel jLabelName;
@@ -685,7 +662,6 @@ public class zoogisticsFrame extends JFrame {
     private javax.swing.JLabel question4;
     private javax.swing.JButton rtnhomeButton;
     public javax.swing.JTextField searchAnimal;
-    private javax.swing.JLabel searchIcon1;
     public javax.swing.JButton submitButton;
     public javax.swing.JButton submitButton2;
     public javax.swing.JButton submitButton3;
