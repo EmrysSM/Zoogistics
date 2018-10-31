@@ -278,11 +278,13 @@ public class zoogisticsFrame extends JFrame {
         mvPanel.add(submitButton2);
         submitButton2.setBounds(410, 484, 108, 30);
 
+        hint1.setBackground(new java.awt.Color(204, 204, 204));
         hint1.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         hint1.setText("Insert the name of the Animal you would like to move");
         mvPanel.add(hint1);
         hint1.setBounds(42, 109, 380, 16);
 
+        hint2.setBackground(new java.awt.Color(204, 204, 204));
         hint2.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
         hint2.setText("Insert the name of the Exhibit you'd like to move the animal to");
         mvPanel.add(hint2);
