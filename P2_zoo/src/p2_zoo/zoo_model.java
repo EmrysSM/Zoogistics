@@ -254,7 +254,7 @@ public List<List<String>> read_Last_Feeding(String main_tb) throws SQLException{
         return 0;
     }
     
-    public int update(String Table, String col, String value, String rowID, int valueID) throws SQLException{
+    public int update(String Table, String col, String value, String rowID, String valueID) throws SQLException{
         String query="Update "+Table+" SET "+col+" = \'"+value+"\' WHERE "+rowID+" = "+valueID+"";
         st.executeUpdate(query);
         int out =0;

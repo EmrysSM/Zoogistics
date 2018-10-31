@@ -33,7 +33,7 @@ public class P2_zoo {
 
         try {
             // 1. Get a connection to database
-            myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/zoo_db", user, pass);
+            myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/zoogistics", user, pass);
 
             // 2. Create a statement
             myStmt = myConn.createStatement();
