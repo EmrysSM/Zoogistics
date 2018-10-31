@@ -342,11 +342,11 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Lucida Grande" size="13" style="3"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="you can search by name, type or ID"/>
+                <Property name="text" type="java.lang.String" value="Please seach for an animal by name"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="33" y="191" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="33" y="191" width="260" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>

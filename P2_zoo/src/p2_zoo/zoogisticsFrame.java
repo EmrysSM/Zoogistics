@@ -222,9 +222,9 @@ public class zoogisticsFrame extends JFrame {
         submitButton3.setBounds(369, 488, 108, 30);
 
         hint.setFont(new java.awt.Font("Lucida Grande", 3, 13)); // NOI18N
-        hint.setText("you can search by name, type or ID");
+        hint.setText("Please seach for an animal by name");
         logPanel.add(hint);
-        hint.setBounds(33, 191, 238, 16);
+        hint.setBounds(33, 191, 260, 16);
 
         bgImage2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p2_zoo/bg4.png"))); // NOI18N
         logPanel.add(bgImage2);
